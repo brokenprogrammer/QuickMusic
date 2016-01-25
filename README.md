@@ -1,2 +1,2 @@
 # QuickMusic
-An simple OSX Music Player
+An simple OS X Music Player
