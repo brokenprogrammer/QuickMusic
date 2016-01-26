@@ -11,9 +11,7 @@
 #import <iTunesLibrary/ITLibrary.h>
 
 int main(int argc, const char * argv[]) {
-    Importer *impo = [[Importer alloc] init];
-    
-    [impo importLib];
+    [Importer importLib];
     
     return NSApplicationMain(argc, argv);
 }

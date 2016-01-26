@@ -8,7 +8,9 @@
 
 #import "Album.h"
 
-@implementation Album
+@implementation Album {
+    
+}
 
 
 

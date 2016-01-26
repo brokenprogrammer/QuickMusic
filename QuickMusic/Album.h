@@ -11,11 +11,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Album : NSObject
+@interface Album : NSObject {
+    
+}
 
 @property NSString* title;
 @property NSUInteger* trackCount;
 @property NSString* artist;
+
+@property NSArray* songs;
 
 @end
 

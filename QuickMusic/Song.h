@@ -10,23 +10,33 @@
 #define Song_h
 
 #import <Foundation/Foundation.h>
+#import <iTunesLibrary/ITLibMediaItem.h>
+#import <iTunesLibrary/ITLibAlbum.h>
+#import <iTunesLibrary/ITLibArtist.h>
 
-@interface Song : NSObject
+@interface Song : NSObject {
+    
+}
 
 @property NSString* title;
 @property NSString* artist;
+@property NSString* composer;
 @property NSString* album;
-@property NSUInteger* trackNumber;
+@property NSUInteger trackNumber;
 @property NSString* genre;
-@property NSUInteger* totalTime;
+@property NSUInteger totalTime;
 
+@property NSInteger rating;
 @property NSDate* releaseDate;
-@property NSUInteger* year;
+@property NSUInteger year;
 
-@property NSUInteger* size;
+@property NSUInteger beatsPerMinute;
 @property NSURL* location;
+@property NSUInteger locationType;
 
-
+//- (id) initWithTitle:(NSString *)title;
+//- (id) initWithLocation: (NSURL *)location;
+//- (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
 @end
 
 #endif /* Song_h */

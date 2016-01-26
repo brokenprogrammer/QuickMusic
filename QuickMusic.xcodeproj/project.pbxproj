@@ -26,6 +26,9 @@
 		ABA1F9A41C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
 		ABA1F9A51C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
 		ABA1F9A61C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
+		ABA6FDC71C577B1C00FFDE0C /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* Library.m */; };
+		ABA6FDC81C577B1C00FFDE0C /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* Library.m */; };
+		ABA6FDC91C577B1C00FFDE0C /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* Library.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,8 @@
 		ABA1F9A11C5675510077B209 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		ABA1F9A21C5675660077B209 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iTunesLibrary.framework; sourceTree = "<group>"; };
+		ABA6FDC61C577B1C00FFDE0C /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
+		ABA6FDCA1C577B4B00FFDE0C /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +140,8 @@
 				ABA1F9981C5674AD0077B209 /* Song.m */,
 				ABA1F9A21C5675660077B209 /* Album.h */,
 				ABA1F99C1C5674C70077B209 /* Album.m */,
+				ABA6FDCA1C577B4B00FFDE0C /* Library.h */,
+				ABA6FDC61C577B1C00FFDE0C /* Library.m */,
 				AB2B226C1C56487D00C269D0 /* Supporting Files */,
 			);
 			path = QuickMusic;
@@ -299,6 +306,7 @@
 				AB2B22711C56487D00C269D0 /* ViewController.m in Sources */,
 				AB2B226E1C56487D00C269D0 /* main.m in Sources */,
 				ABA1F99D1C5674C70077B209 /* Album.m in Sources */,
+				ABA6FDC71C577B1C00FFDE0C /* Library.m in Sources */,
 				AB2B226B1C56487D00C269D0 /* AppDelegate.m in Sources */,
 				ABA1F9911C5673C60077B209 /* Importer.m in Sources */,
 			);
@@ -312,6 +320,7 @@
 				AB2B22811C56487D00C269D0 /* QuickMusicTests.m in Sources */,
 				ABA1F9921C5673C60077B209 /* Importer.m in Sources */,
 				ABA1F99E1C5674C70077B209 /* Album.m in Sources */,
+				ABA6FDC81C577B1C00FFDE0C /* Library.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +332,7 @@
 				AB2B228C1C56487D00C269D0 /* QuickMusicUITests.m in Sources */,
 				ABA1F9931C5673C60077B209 /* Importer.m in Sources */,
 				ABA1F99F1C5674C70077B209 /* Album.m in Sources */,
+				ABA6FDC91C577B1C00FFDE0C /* Library.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
