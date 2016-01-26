@@ -9,5 +9,24 @@
 #ifndef Song_h
 #define Song_h
 
+#import <Foundation/Foundation.h>
+
+@interface Song : NSObject
+
+@property NSString* title;
+@property NSString* artist;
+@property NSString* album;
+@property NSUInteger* trackNumber;
+@property NSString* genre;
+@property NSUInteger* totalTime;
+
+@property NSDate* releaseDate;
+@property NSUInteger* year;
+
+@property NSUInteger* size;
+@property NSURL* location;
+
+
+@end
 
 #endif /* Song_h */

@@ -6,8 +6,11 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Song.h"
 
-@interface Song : NSObject
+@implementation Song
+
+
 
 @end
+

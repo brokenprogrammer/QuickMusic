@@ -6,8 +6,10 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Album.h"
 
-@interface Album : NSObject
+@implementation Album
+
+
 
 @end

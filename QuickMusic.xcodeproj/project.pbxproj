@@ -443,6 +443,8 @@
 				);
 				INFOPLIST_FILE = QuickMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /Library/Frameworks/iTunesLibrary.framework;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/iTunesLibrary.framework;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,6 +462,8 @@
 				);
 				INFOPLIST_FILE = QuickMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /Library/Frameworks/iTunesLibrary.framework;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/iTunesLibrary.framework;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";

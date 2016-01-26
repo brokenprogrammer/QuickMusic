@@ -9,5 +9,16 @@
 #ifndef Importer_h
 #define Importer_h
 
+#import <Foundation/Foundation.h>
+#import <iTunesLibrary/ITLibrary.h>
+#import <iTunesLibrary/ITLibMediaItem.h>
+
+@interface Importer : NSObject
+
+
+- (void) importLib;
+
+
+@end
 
 #endif /* Importer_h */
