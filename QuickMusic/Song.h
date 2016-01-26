@@ -34,9 +34,9 @@
 @property NSURL* location;
 @property NSUInteger locationType;
 
-//- (id) initWithTitle:(NSString *)title;
-//- (id) initWithLocation: (NSURL *)location;
-//- (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
+- (id) initWithTitle:(NSString *)title;
+- (id) initWithLocation: (NSURL *)location;
+- (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
 @end
 
 #endif /* Song_h */
