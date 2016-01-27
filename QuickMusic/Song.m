@@ -28,6 +28,13 @@
 @synthesize location = _location;
 @synthesize locationType = _locationType;
 
+/**
+ * Initialize new Song with the specified title.
+ * This will create an empty song with only a title.
+ *
+ * @param title - the title of the Song.
+ * @returns the new instance of the Song.
+ */
 - (id) initWithTitle:(NSString *)title {
     if (self = [super init]) {
         _title = title;
@@ -35,6 +42,13 @@
     return self;
 }
 
+/**
+ * Initialize new Song with the specified file location.
+ * This will create an empty song with only a file location.
+ *
+ * @param location - the file location of the Song.
+ * @returns the new instance of the Song.
+ */
 - (id) initWithLocation:(NSURL *)location {
     if (self = [super init]) {
         _location = location;
@@ -42,6 +56,13 @@
     return self;
 }
 
+/**
+ * Initialize new Song using a complete iTunes Media Item.
+ * This will create a full Song initializing all the properties.
+ *
+ * @param songInfo - iTunes media item containing all information for a Song.
+ * @returns the new instance of the Song.
+ */
 - (id) initWithMediaItem:(ITLibMediaItem *)songInfo {
     if (self = [super init]) {
         _title = [songInfo title];

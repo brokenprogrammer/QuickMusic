@@ -12,8 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <iTunesLibrary/ITLibrary.h>
 #import <iTunesLibrary/ITLibMediaItem.h>
-//#import <iTunesLibrary/ITLibAlbum.h>
-//#import <iTunesLibrary/ITLibArtist.h>
 
 #import "Library.h"
 #import "Album.h"
@@ -24,7 +22,8 @@
     // Protected instance variables
 }
 
-+ (Library *) importLib;
+//Import iTunes library
++ (Library *) importITLib;
 
 @end
 

@@ -13,10 +13,10 @@
 #import <iTunesLibrary/ITLibrary.h>
 
 int main(int argc, const char * argv[]) {
-    Library *MyLib = [Importer importLib];
+    Library *MyLib = [Importer importITLib];
     
     NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
     NSLog(@"%@", [MyLib getAlbums]);
-    NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:1] title]);
+    NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] songs] count]);
     return NSApplicationMain(argc, argv);
 }
