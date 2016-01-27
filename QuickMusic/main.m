@@ -17,6 +17,6 @@ int main(int argc, const char * argv[]) {
     
     NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
     NSLog(@"%@", [MyLib getAlbums]);
-    NSLog(@"%ld", [[MyLib getAlbums] count]);
+    NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:1] title]);
     return NSApplicationMain(argc, argv);
 }

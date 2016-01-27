@@ -17,9 +17,9 @@
     
 }
 
-@property const NSString* source; /* source of the import */
-@property NSMutableArray* albums; /* array of albums */
-@property NSUInteger albumCount;  /* ammount of albums */
+@property const NSString* source; /* Source of the import */
+@property NSMutableArray* albums; /* Array of albums */
+@property NSUInteger albumCount;  /* Ammount of albums */
 
 //Initialize with sourcename
 - (id) initWithSource:(NSString *)sourceName;
@@ -30,13 +30,13 @@
 //Retrieves all albums
 - (NSMutableArray *) getAlbums;
 
-//Get Album by its array id
+//Return Album by its array index
 - (Album *) getAlbumById:(NSUInteger) albumID;
 
-//Get Albums of specific artist
-- (Album *) getAlbumByArtist:(NSString *) artist;
+//Returns Albums of specific artist
+- (NSMutableArray *) getAlbumByArtist:(NSString *) artist;
 
-//Get Album by using a Song.
+//Returns Album by using a Songs properties.
 - (Album *) getAlbumBySong:(Song *) song;
 @end
 

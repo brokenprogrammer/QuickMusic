@@ -18,24 +18,27 @@
     
 }
 
-@property NSString* title;
-@property NSString* artist;
-@property NSString* composer;
-@property NSString* album;
-@property NSUInteger trackNumber;
-@property NSString* genre;
-@property NSUInteger totalTime;
+@property NSString* title;           /* Song Title */
+@property NSString* artist;          /* Song Artist */
+@property NSString* composer;        /* Song Composer */
+@property NSString* album;           /* Song Album Title */
+@property NSUInteger trackNumber;    /* Song TrackNumber */
+@property NSString* genre;           /* Song Genre */
+@property NSUInteger totalTime;      /* Song Total RunTime */
 
-@property NSInteger rating;
-@property NSDate* releaseDate;
-@property NSUInteger year;
+@property NSInteger rating;          /* Song Rating */
+@property NSDate* releaseDate;       /* Song Release Date */
+@property NSUInteger year;           /* Song Release Year */
 
-@property NSUInteger beatsPerMinute;
-@property NSURL* location;
-@property NSUInteger locationType;
+@property NSUInteger beatsPerMinute; /* Song Beats Per Minute BPM */
+@property NSURL* location;           /* Song File Path */
+@property NSUInteger locationType;   /* Song LocationType (File, URL, Remote) */
 
+//Initialize using only a title
 - (id) initWithTitle:(NSString *)title;
+//Initialize using only a file location
 - (id) initWithLocation: (NSURL *)location;
+//Initialize using the information from an iTunes Media Item
 - (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
 @end
 

@@ -20,6 +20,7 @@
     
     if (aLib) {
         NSArray *tracks = aLib.allMediaItems;
+        Album *lastAlbum;
         
         if (tracks.count >= 1) {
             
@@ -28,12 +29,20 @@
                 if (cur.mediaKind == 2) {
                     Song *aSong = [[Song alloc] initWithMediaItem:cur];
                     
-                    Album *currentAlbum = [iTunesLib getAlbumBySong:aSong];
-                    if (currentAlbum != nil) {
-                        [currentAlbum addSong:aSong];
+                    if (lastAlbum != nil &&
+                         [aSong.album isEqualToString:lastAlbum.title] &&
+                            [aSong.artist isEqualToString:lastAlbum.artist]) {
+                        [lastAlbum addSong:aSong];
                     } else {
-                        currentAlbum = [[Album alloc] initWithTitleAndArtist:[aSong album] :[aSong artist]];
-                        [iTunesLib addAlbum:currentAlbum];
+                        Album *currentAlbum = [iTunesLib getAlbumBySong:aSong];
+                        if (currentAlbum != nil) {
+                            [currentAlbum addSong:aSong];
+                            lastAlbum = currentAlbum;
+                        } else {
+                            currentAlbum = [[Album alloc] initWithTitleAndArtist:[aSong album] :[aSong artist]];
+                            [iTunesLib addAlbum:currentAlbum];
+                            lastAlbum = currentAlbum;
+                        }
                     }
                 }
             }
