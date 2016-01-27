@@ -16,11 +16,11 @@
     
 }
 
-@property NSString* title;        /* Album Title */
-@property NSUInteger* trackCount; /* Ammount of tracks in album */
-@property NSString* artist;       /* Album Artist */
+@property NSString* albumTitle;        /* Album Title */
+@property NSUInteger* albumTrackCount; /* Ammount of tracks in album */
+@property NSString* albumArtist;       /* Album Artist */
 
-@property NSMutableArray* songs;  /* Array of songs owned by Album */
+@property NSMutableArray* albumSongs;  /* Array of songs owned by Album */
 
 //Initialize using only a title
 - (id) initWithTitle:(NSString *)title;

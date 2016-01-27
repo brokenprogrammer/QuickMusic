@@ -15,8 +15,8 @@
 int main(int argc, const char * argv[]) {
     Library *MyLib = [Importer importITLib];
     
-    NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
+    NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] albumTitle]);
     NSLog(@"%@", [MyLib getAlbums]);
-    NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] songs] count]);
+    NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] albumSongs] count]);
     return NSApplicationMain(argc, argv);
 }

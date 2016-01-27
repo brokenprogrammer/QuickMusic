@@ -19,8 +19,8 @@
  */
 - (id) initWithTitle:(NSString *)title {
     if (self = [super init]) {
-        _title = title;
-        _songs = [[NSMutableArray alloc] init];
+        _albumTitle = title;
+        _albumSongs = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -35,9 +35,9 @@
  */
 - (id) initWithTitleAndArtist:(NSString *)title :(NSString *)artist {
     if (self = [super init]) {
-        _title = title;
-        _artist = artist;
-        _songs = [[NSMutableArray alloc] init];
+        _albumTitle = title;
+        _albumArtist = artist;
+        _albumSongs = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -49,8 +49,8 @@
  * @param song - a new Song object to add to the songs array.
  */
 - (void) addSong:(Song *)song {
-    [_songs addObject:song];
-    _trackCount++;
+    [_albumSongs addObject:song];
+    _albumTrackCount++;
 }
 
 /**
@@ -61,9 +61,9 @@
  *    was found.
  */
 - (Song *) getSongByTitle:(NSString *)title {
-    for (int x = 0; x < [_songs count]; x++) {
-        if ([title isEqualToString:[[_songs objectAtIndex:x] title]]) {
-            return [_songs objectAtIndex:x];
+    for (int x = 0; x < [_albumSongs count]; x++) {
+        if ([title isEqualToString:[[_albumSongs objectAtIndex:x] title]]) {
+            return [_albumSongs objectAtIndex:x];
         }
     }
     return nil;
@@ -77,8 +77,8 @@
  *     index doesn't exist.
  */
 - (Song *) getSongByID:(NSUInteger)trackID {
-    if (trackID < [_songs count]) {
-        return _songs[trackID];
+    if (trackID < [_albumSongs count]) {
+        return _albumSongs[trackID];
     }
     return nil;
 }

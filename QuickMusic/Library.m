@@ -72,7 +72,7 @@
     NSMutableArray *albumsFromArtist = [[NSMutableArray alloc] init];
     
     for (int x = 0; x < _albumCount; x++) {
-        if ([artist isEqualToString:[[_albums objectAtIndex:x] artist]]) {
+        if ([artist isEqualToString:[[_albums objectAtIndex:x] albumArtist]]) {
             //return [_albums objectAtIndex:x];
             [albumsFromArtist addObject:[_albums objectAtIndex:x]];
         }
@@ -102,7 +102,7 @@
     
     for (int x = 0; x < _albumCount; x++) {
         if ([albumTitle isEqualToString:[[_albums objectAtIndex:x] title]]) {
-            if ([albumArtist isEqualToString:[[_albums objectAtIndex:x] artist]]) {
+            if ([albumArtist isEqualToString:[[_albums objectAtIndex:x] albumArtist]]) {
                 return [_albums objectAtIndex:x];
             }
         }

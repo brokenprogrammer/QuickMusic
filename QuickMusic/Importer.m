@@ -44,8 +44,8 @@
                     
                     /* Checking if the last used album is the same for this Song*/
                     if (lastAlbum != nil &&
-                         [newSong.album isEqualToString:lastAlbum.title] &&
-                            [newSong.artist isEqualToString:lastAlbum.artist]) {
+                         [newSong.album isEqualToString:lastAlbum.albumTitle] &&
+                            [newSong.artist isEqualToString:lastAlbum.albumArtist]) {
                         [lastAlbum addSong:newSong];
                     } else { /* If not try find an existing Album using the getAlbumBySong */
                         Album *currentAlbum = [iTunesLib getAlbumBySong:newSong];

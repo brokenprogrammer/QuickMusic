@@ -14,6 +14,8 @@
 		AB2B22761C56487D00C269D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2B22741C56487D00C269D0 /* Main.storyboard */; };
 		AB2B22811C56487D00C269D0 /* QuickMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B22801C56487D00C269D0 /* QuickMusicTests.m */; };
 		AB2B228C1C56487D00C269D0 /* QuickMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B228B1C56487D00C269D0 /* QuickMusicUITests.m */; };
+		AB9FD4C91C58F1980073225C /* ImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FD4C81C58F1980073225C /* ImporterTests.m */; };
+		AB9FD4CB1C58F6660073225C /* SongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FD4CA1C58F6660073225C /* SongTests.m */; };
 		ABA1F9911C5673C60077B209 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9901C5673C60077B209 /* Importer.m */; };
 		ABA1F9921C5673C60077B209 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9901C5673C60077B209 /* Importer.m */; };
 		ABA1F9931C5673C60077B209 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9901C5673C60077B209 /* Importer.m */; };
@@ -26,6 +28,7 @@
 		ABA1F9A41C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
 		ABA1F9A51C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
 		ABA1F9A61C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
+		ABA6086B1C5931760073F1B4 /* AlbumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6086A1C5931760073F1B4 /* AlbumTests.m */; };
 		ABA6FDC71C577B1C00FFDE0C /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* Library.m */; };
 		ABA6FDC81C577B1C00FFDE0C /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* Library.m */; };
 		ABA6FDC91C577B1C00FFDE0C /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* Library.m */; };
@@ -64,6 +67,8 @@
 		AB2B22871C56487D00C269D0 /* QuickMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2B228B1C56487D00C269D0 /* QuickMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickMusicUITests.m; sourceTree = "<group>"; };
 		AB2B228D1C56487D00C269D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB9FD4C81C58F1980073225C /* ImporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImporterTests.m; sourceTree = "<group>"; };
+		AB9FD4CA1C58F6660073225C /* SongTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTests.m; sourceTree = "<group>"; };
 		ABA1F9901C5673C60077B209 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Importer.m; sourceTree = "<group>"; };
 		ABA1F9981C5674AD0077B209 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		ABA1F99C1C5674C70077B209 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		ABA1F9A11C5675510077B209 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		ABA1F9A21C5675660077B209 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iTunesLibrary.framework; sourceTree = "<group>"; };
+		ABA6086A1C5931760073F1B4 /* AlbumTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTests.m; sourceTree = "<group>"; };
 		ABA6FDC61C577B1C00FFDE0C /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
 		ABA6FDCA1C577B4B00FFDE0C /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +166,9 @@
 			children = (
 				AB2B22801C56487D00C269D0 /* QuickMusicTests.m */,
 				AB2B22821C56487D00C269D0 /* Info.plist */,
+				AB9FD4C81C58F1980073225C /* ImporterTests.m */,
+				AB9FD4CA1C58F6660073225C /* SongTests.m */,
+				ABA6086A1C5931760073F1B4 /* AlbumTests.m */,
 			);
 			path = QuickMusicTests;
 			sourceTree = "<group>";
@@ -317,10 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA1F99A1C5674AD0077B209 /* Song.m in Sources */,
+				AB9FD4CB1C58F6660073225C /* SongTests.m in Sources */,
 				AB2B22811C56487D00C269D0 /* QuickMusicTests.m in Sources */,
+				ABA6086B1C5931760073F1B4 /* AlbumTests.m in Sources */,
 				ABA1F9921C5673C60077B209 /* Importer.m in Sources */,
 				ABA1F99E1C5674C70077B209 /* Album.m in Sources */,
 				ABA6FDC81C577B1C00FFDE0C /* Library.m in Sources */,
+				AB9FD4C91C58F1980073225C /* ImporterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,8 +465,7 @@
 				);
 				INFOPLIST_FILE = QuickMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /Library/Frameworks/iTunesLibrary.framework;
-				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/iTunesLibrary.framework;
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,8 +483,7 @@
 				);
 				INFOPLIST_FILE = QuickMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /Library/Frameworks/iTunesLibrary.framework;
-				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/iTunesLibrary.framework;
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
