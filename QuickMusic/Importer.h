@@ -24,7 +24,7 @@
     // Protected instance variables
 }
 
-+ (void) importLib;
++ (Library *) importLib;
 
 @end
 

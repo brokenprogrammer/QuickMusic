@@ -8,10 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Importer.h"
+#import "Library.h"
+#import "Album.h"
 #import <iTunesLibrary/ITLibrary.h>
 
 int main(int argc, const char * argv[]) {
-    [Importer importLib];
+    Library *MyLib = [Importer importLib];
     
+    NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
+    NSLog(@"%@", [MyLib getAlbums]);
+    NSLog(@"%ld", [[MyLib getAlbums] count]);
     return NSApplicationMain(argc, argv);
 }

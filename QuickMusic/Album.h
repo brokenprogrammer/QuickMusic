@@ -10,6 +10,7 @@
 #define Album_h
 
 #import <Foundation/Foundation.h>
+#import "Song.h"
 
 @interface Album : NSObject {
     
@@ -19,7 +20,15 @@
 @property NSUInteger* trackCount;
 @property NSString* artist;
 
-@property NSArray* songs;
+@property NSMutableArray* songs;
+
+- (id) initWithTitle:(NSString *)title;
+- (id) initWithTitleAndArtist:(NSString *)title :(NSString *)artist;
+
+- (void) addSong:(Song *)song;
+//- (Song *) getSongByTitle:(NSString *)title;
+- (Song *) getSongByID:(NSUInteger)trackID;
+
 
 @end
 

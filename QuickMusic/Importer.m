@@ -12,7 +12,9 @@
     //Private instance variables
 }
 
-+ (void) importLib {
++ (Library *) importLib {
+    Library *iTunesLib = [[Library alloc] initWithSource:@"iTunes"];
+    
     NSError *error = nil;
     ITLibrary *aLib = [ITLibrary libraryWithAPIVersion:@"1.0" error:&error];
     
@@ -25,16 +27,22 @@
                 ITLibMediaItem *cur = [tracks objectAtIndex:i];
                 if (cur.mediaKind == 2) {
                     Song *aSong = [[Song alloc] initWithMediaItem:cur];
-                    //TODO: implement Albums using Artistname & Album name in dictionary
-                    //TODO: implement library that holds array of albums.
-                    NSLog(@"%@ %@ %@", [aSong title], [aSong artist], [aSong album]);
+                    
+                    Album *currentAlbum = [iTunesLib getAlbumBySong:aSong];
+                    if (currentAlbum != nil) {
+                        [currentAlbum addSong:aSong];
+                    } else {
+                        currentAlbum = [[Album alloc] initWithTitleAndArtist:[aSong album] :[aSong artist]];
+                        [iTunesLib addAlbum:currentAlbum];
+                    }
                 }
             }
-            
         }
     } else {
         NSLog(@"%@", error);
     }
+    
+    return iTunesLib;
 }
 
 @end
