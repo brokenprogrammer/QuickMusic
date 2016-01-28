@@ -82,7 +82,7 @@
     
     XCTAssertEqual([[[self.testLib getAlbums] objectAtIndex:newAlbumCount] isKindOfClass:[QMAlbum class]], true, @"getAlbums returns all albums.");
     
-    XCTAssertEqual([[[self.testLib getAlbums] objectAtIndex:newAlbumCount] albumTitle], @"testAlbum", @"The testLib's latest Albums titles match");
+    XCTAssertEqual([[[self.testLib getAlbums] objectAtIndex:newAlbumCount] title], @"testAlbum", @"The testLib's latest Albums titles match");
 }
 
 - (void)testGetAlbumByID {
@@ -93,7 +93,7 @@
     NSUInteger songAmmount = [[self.testLib albums] count] - 1;
     
     XCTAssertEqual([[self.testLib getAlbumById:songAmmount] isKindOfClass:[QMAlbum class]], true, @"getAlbumByID returns the Album at the specified index.");
-    XCTAssertEqual([[self.testLib getAlbumById:songAmmount] albumTitle], @"testAlbum", @"Titles for getAlbumByID is matching.");
+    XCTAssertEqual([[self.testLib getAlbumById:songAmmount] title], @"testAlbum", @"Titles for getAlbumByID is matching.");
 }
 
 - (void)testGetAlbumByArtist {
@@ -103,7 +103,7 @@
     
     XCTAssertEqual([[self.testLib getAlbumByArtist:@"testArtist"] isKindOfClass:[NSMutableArray class]], true, @"getAlbumByArtist returns an NSMutableArray.");
     
-    XCTAssertEqual([[[self.testLib getAlbumByArtist:@"testArtist"] objectAtIndex:0] albumTitle], @"testAlbum", @"Titles for getAlbumByArtist is matching.");
+    XCTAssertEqual([[[self.testLib getAlbumByArtist:@"testArtist"] objectAtIndex:0] title], @"testAlbum", @"Titles for getAlbumByArtist is matching.");
 }
 
 - (void)testGetAlbumBySong {
@@ -117,7 +117,7 @@
     [self.testLib addAlbum:newAlbum];
     
     XCTAssertEqual([[self.testLib getAlbumBySong:newSong] isKindOfClass:[QMAlbum class]], true, @"getAlbumBySong return an Album.");
-    XCTAssertEqual([[self.testLib getAlbumBySong:newSong] albumTitle], @"testAlbum", @"Titles for getAlbumBySong is matching.");
+    XCTAssertEqual([[self.testLib getAlbumBySong:newSong] title], @"testAlbum", @"Titles for getAlbumBySong is matching.");
 }
 
 @end

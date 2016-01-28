@@ -42,7 +42,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _testSong = [[[[[QMImporter importITLib] getAlbums] objectAtIndex:0] albumSongs] objectAtIndex:0];
+    _testSong = [[[[[QMImporter importITLib] getAlbums] objectAtIndex:0] songs] objectAtIndex:0];
 }
 
 - (void)tearDown {

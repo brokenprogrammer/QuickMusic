@@ -34,21 +34,21 @@
     
 }
 
-@property (nonatomic, strong) NSString* title;           /* Song Title */
-@property (nonatomic, strong) NSString* artist;          /* Song Artist */
-@property (nonatomic, strong) NSString* composer;        /* Song Composer */
-@property (nonatomic, strong) NSString* album;           /* Song Album Title */
-@property (nonatomic) NSUInteger trackNumber;            /* Song TrackNumber */
-@property (nonatomic, strong) NSString* genre;           /* Song Genre */
-@property (nonatomic) NSUInteger totalTime;              /* Song Total RunTime */
+@property (nonatomic, copy) NSString* title;           /* Song Title */
+@property (nonatomic, copy) NSString* artist;          /* Song Artist */
+@property (nonatomic, copy) NSString* composer;        /* Song Composer */
+@property (nonatomic, copy) NSString* album;           /* Song Album Title */
+@property (nonatomic) NSUInteger trackNumber;          /* Song TrackNumber */
+@property (nonatomic, copy) NSString* genre;           /* Song Genre */
+@property (nonatomic) NSUInteger totalTime;            /* Song Total RunTime */
 
-@property (nonatomic) NSInteger rating;                  /* Song Rating */
-@property (nonatomic, strong) NSDate* releaseDate;       /* Song Release Date */
-@property (nonatomic) NSUInteger year;                   /* Song Release Year */
+@property (nonatomic) NSInteger rating;                /* Song Rating */
+@property (nonatomic, copy) NSDate* releaseDate;       /* Song Release Date */
+@property (nonatomic) NSUInteger year;                 /* Song Release Year */
 
-@property (nonatomic) NSUInteger beatsPerMinute;         /* Song Beats Per Minute BPM */
-@property (nonatomic, strong) NSURL* location;           /* Song File Path */
-@property (nonatomic) NSUInteger locationType;           /* Song LocationType (File, URL, Remote) */
+@property (nonatomic) NSUInteger beatsPerMinute;       /* Song Beats Per Minute BPM */
+@property (nonatomic, copy) NSURL* location;           /* Song File Path */
+@property (nonatomic) NSUInteger locationType;         /* Song LocationType (File, URL, Remote) */
 
 //Initialize using only a title
 - (id) initWithTitle:(NSString *)songTitle;

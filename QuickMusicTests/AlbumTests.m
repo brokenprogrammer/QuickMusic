@@ -57,23 +57,23 @@
 - (void)testAlbumValues {
     XCTAssertEqual([self.testAlbum isKindOfClass:[QMAlbum class]], true, @"The testAlbum is a Album Object.");
     
-    XCTAssertEqual([[self.testAlbum albumTitle] isKindOfClass:[NSString class]], true, @"The albumTitle is a NSString");
+    XCTAssertEqual([[self.testAlbum title] isKindOfClass:[NSString class]], true, @"The albumTitle is a NSString");
     
-    XCTAssertEqual([self.testAlbum albumTrackCount] >= 0, true, @"The albumTrackCount is a NSUInteger");
+    XCTAssertEqual([self.testAlbum trackCount] >= 0, true, @"The albumTrackCount is a NSUInteger");
     
-    XCTAssertEqual([[self.testAlbum albumArtist] isKindOfClass:[NSString class]], true, @"The albumArtist is a NSString");
+    XCTAssertEqual([[self.testAlbum artist] isKindOfClass:[NSString class]], true, @"The albumArtist is a NSString");
     
-    XCTAssertEqual([[self.testAlbum albumSongs] isKindOfClass:[NSMutableArray class]], true, @"The albumSongs is a NSMutableArray");
+    XCTAssertEqual([[self.testAlbum songs] isKindOfClass:[NSMutableArray class]], true, @"The albumSongs is a NSMutableArray");
     
 }
 
 - (void)testAddSong {
-    NSUInteger songAmmount = [[self.testAlbum albumSongs] count];
+    NSUInteger songAmmount = [[self.testAlbum songs] count];
     QMSong *newSong = [[QMSong alloc] initWithTitle:@"A New Song"];
     
     [self.testAlbum addSong:newSong];
     
-    XCTAssertGreaterThan([[self.testAlbum albumSongs] count], songAmmount, @"Successfully added song to album.");
+    XCTAssertGreaterThan([[self.testAlbum songs] count], songAmmount, @"Successfully added song to album.");
 }
 
 - (void)testGetSongByTitle {
@@ -90,7 +90,7 @@
     
     [self.testAlbum addSong:newSong];
     
-    NSUInteger songAmmount = [[self.testAlbum albumSongs] count] - 1;
+    NSUInteger songAmmount = [[self.testAlbum songs] count] - 1;
     
     XCTAssertEqual([[self.testAlbum getSongByID:songAmmount] isKindOfClass:[QMSong class]], true, @"getSongByID returns the song at the specified index.");
     XCTAssertEqual([[self.testAlbum getSongByID:songAmmount] title], @"TestTitle", @"Titles for getSongByID is matching.");

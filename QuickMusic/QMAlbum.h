@@ -32,11 +32,11 @@
     
 }
 
-@property (nonatomic, strong) NSString* albumTitle;        /* Album Title */
-@property (nonatomic) NSUInteger* albumTrackCount;         /* Ammount of tracks in album */
-@property (nonatomic, strong) NSString* albumArtist;       /* Album Artist */
+@property (nonatomic, copy) NSString* title;        /* Album Title */
+@property (nonatomic) NSUInteger* trackCount;         /* Ammount of tracks in album */
+@property (nonatomic, copy) NSString* artist;       /* Album Artist */
 
-@property (nonatomic, strong) NSMutableArray* albumSongs;  /* Array of songs owned by Album */
+@property (nonatomic, strong) NSMutableArray* songs;  /* Array of songs owned by Album */
 
 //Initialize using only a title
 - (id) initWithTitle:(NSString *)title;

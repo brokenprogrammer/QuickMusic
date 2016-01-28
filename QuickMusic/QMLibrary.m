@@ -41,7 +41,7 @@
 - (id) initWithSource:(NSString *)sourceName {
     if (self = [super init]) {
         self.source = sourceName;
-        self.albums = [[NSMutableArray alloc] init];
+        self.albums = [NSMutableArray array];
     }
     return self;
 }
@@ -74,10 +74,11 @@
  *     returns nil if there is no album at the specified index.
  */
 - (QMAlbum *) getAlbumById:(NSUInteger)albumID {
+    QMAlbum *album = nil;
     if (albumID < [self.albums count]) {
-        return self.albums[albumID];
+        album = self.albums[albumID];
     }
-    return nil;
+    return album;
 }
 
 /**
@@ -88,17 +89,17 @@
  *     returns nil if artist not found in any albums.
  */
 - (NSMutableArray *) getAlbumByArtist:(NSString *)artist {
-    NSMutableArray *albumsFromArtist = [[NSMutableArray alloc] init];
+    NSMutableArray *albumsFromArtist = [NSMutableArray array];
     
     for (int x = 0; x < self.albumCount; x++) {
-        if ([artist isEqualToString:[[self.albums objectAtIndex:x] albumArtist]]) {
+        //Have to do typeCast because XCode thinks im referring to ITLibArtist
+        if ([artist isEqualToString:(NSString *)[[self.albums objectAtIndex:x] artist]]) {
             [albumsFromArtist addObject:[self.albums objectAtIndex:x]];
         }
     }
     
     if ([albumsFromArtist count] < 1) {
         albumsFromArtist = nil;
-        return nil;
     }
     
     return albumsFromArtist;
@@ -115,16 +116,18 @@
  *     if there was no matches.
  */
 - (QMAlbum *) getAlbumBySong:(QMSong *)song {
+    QMAlbum *album = nil;
     NSString *albumTitle = song.album;
     NSString *albumArtist = song.artist;
     
     for (int x = 0; x < self.albumCount; x++) {
-        if ([albumTitle isEqualToString:[[self.albums objectAtIndex:x] albumTitle]]) {
-            if ([albumArtist isEqualToString:[[self.albums objectAtIndex:x] albumArtist]]) {
-                return [self.albums objectAtIndex:x];
+        if ([albumTitle isEqualToString:[[self.albums objectAtIndex:x] title]]) {
+            //Have to do typeCast because XCode thinks im referring to ITLibArtist
+            if ([albumArtist isEqualToString:(NSString *)[[self.albums objectAtIndex:x] artist]]) {
+                album = [self.albums objectAtIndex:x];
             }
         }
     }
-    return nil;
+    return album;
 }
 @end
