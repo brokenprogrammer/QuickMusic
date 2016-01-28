@@ -101,7 +101,7 @@
     NSString *albumArtist = song.artist;
     
     for (int x = 0; x < _albumCount; x++) {
-        if ([albumTitle isEqualToString:[[_albums objectAtIndex:x] title]]) {
+        if ([albumTitle isEqualToString:[[_albums objectAtIndex:x] albumTitle]]) {
             if ([albumArtist isEqualToString:[[_albums objectAtIndex:x] albumArtist]]) {
                 return [_albums objectAtIndex:x];
             }
