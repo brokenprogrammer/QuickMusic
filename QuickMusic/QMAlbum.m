@@ -38,8 +38,8 @@
  */
 - (id) initWithTitle:(NSString *)title {
     if (self = [super init]) {
-        _albumTitle = title;
-        _albumSongs = [[NSMutableArray alloc] init];
+        self.albumTitle = title;
+        self.albumSongs = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -54,9 +54,9 @@
  */
 - (id) initWithTitleAndArtist:(NSString *)title :(NSString *)artist {
     if (self = [super init]) {
-        _albumTitle = title;
-        _albumArtist = artist;
-        _albumSongs = [[NSMutableArray alloc] init];
+        self.albumTitle = title;
+        self.albumArtist = artist;
+        self.albumSongs = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -68,8 +68,8 @@
  * @param song - a new Song object to add to the songs array.
  */
 - (void) addSong:(QMSong *)song {
-    [_albumSongs addObject:song];
-    _albumTrackCount++;
+    [self.albumSongs addObject:song];
+    self.albumTrackCount++;
 }
 
 /**
@@ -80,9 +80,9 @@
  *    was found.
  */
 - (QMSong *) getSongByTitle:(NSString *)title {
-    for (int x = 0; x < [_albumSongs count]; x++) {
-        if ([title isEqualToString:[[_albumSongs objectAtIndex:x] title]]) {
-            return [_albumSongs objectAtIndex:x];
+    for (int x = 0; x < [self.albumSongs count]; x++) {
+        if ([title isEqualToString:[[self.albumSongs objectAtIndex:x] title]]) {
+            return [self.albumSongs objectAtIndex:x];
         }
     }
     return nil;
@@ -96,8 +96,8 @@
  *     index doesn't exist.
  */
 - (QMSong *) getSongByID:(NSUInteger)trackID {
-    if (trackID < [_albumSongs count]) {
-        return _albumSongs[trackID];
+    if (trackID < [self.albumSongs count]) {
+        return self.albumSongs[trackID];
     }
     return nil;
 }

@@ -31,21 +31,21 @@
     
 }
 
-@synthesize title = _title;
-@synthesize artist = _artist;
-@synthesize composer = _composer;
-@synthesize album = _album;
-@synthesize trackNumber = _trackNumber;
-@synthesize genre = _genre;
-@synthesize totalTime = _totalTime;
+@synthesize title;
+@synthesize artist;
+@synthesize composer;
+@synthesize album;
+@synthesize trackNumber;
+@synthesize genre;
+@synthesize totalTime;
 
-@synthesize rating = _rating;
-@synthesize releaseDate = _releaseDate;
-@synthesize year = _year;
+@synthesize rating;
+@synthesize releaseDate;
+@synthesize year;
 
-@synthesize beatsPerMinute = _beatsPerMinute;
-@synthesize location = _location;
-@synthesize locationType = _locationType;
+@synthesize beatsPerMinute;
+@synthesize location;
+@synthesize locationType;
 
 /**
  * Initialize new Song with the specified title.
@@ -54,9 +54,9 @@
  * @param title - the title of the Song.
  * @returns the new instance of the Song.
  */
-- (id) initWithTitle:(NSString *)title {
+- (id) initWithTitle:(NSString *)songTitle {
     if (self = [super init]) {
-        _title = title;
+        self.title = songTitle;
     }
     return self;
 }
@@ -68,9 +68,9 @@
  * @param location - the file location of the Song.
  * @returns the new instance of the Song.
  */
-- (id) initWithLocation:(NSURL *)location {
+- (id) initWithLocation:(NSURL *)songLocation {
     if (self = [super init]) {
-        _location = location;
+        self.location = songLocation;
     }
     return self;
 }
@@ -84,21 +84,22 @@
  */
 - (id) initWithMediaItem:(ITLibMediaItem *)songInfo {
     if (self = [super init]) {
-        _title = [songInfo title];
-        _artist = [[songInfo artist] name];
-        _composer = [songInfo composer];
-        _album = [[songInfo album] title];
-        _trackNumber = [songInfo trackNumber];
-        _genre = [songInfo genre];
-        _totalTime = [songInfo totalTime];
+        self.title = [songInfo title];
+        self.artist = [[songInfo artist] name];
+        self.composer = [songInfo composer];
+        self.album = [[songInfo album] title];
+        self.trackNumber = [songInfo trackNumber];
+        self.genre = [songInfo genre];
+        self.totalTime = [songInfo totalTime];
         
-        _rating = [songInfo rating];
-        _releaseDate = [songInfo releaseDate];
-        _year = [songInfo year];
+        self.rating = [songInfo rating];
+        self.releaseDate = [songInfo releaseDate];
+        self.year = [songInfo year];
         
-        _beatsPerMinute = [songInfo beatsPerMinute];
-        _location = [songInfo location];
+        self.beatsPerMinute = [songInfo beatsPerMinute];
+        self.location = [songInfo location];
     }
+    
     return self;
 }
 @end

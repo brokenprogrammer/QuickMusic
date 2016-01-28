@@ -51,79 +51,79 @@
 }
 
 - (void)testSongType {
-    XCTAssertEqual([_testSong isKindOfClass:[QMSong class]], true, @"The testSong is a Song Object.");
+    XCTAssertEqual([self.testSong isKindOfClass:[QMSong class]], true, @"The testSong is a Song Object.");
 }
 
 - (void)testSongValues {
     /* Test For Song Title */
-    XCTAssertEqual([[_testSong title] isKindOfClass:[NSString class]], true, @"The testSong title is a NSString.");
+    XCTAssertEqual([[self.testSong title] isKindOfClass:[NSString class]], true, @"The testSong title is a NSString.");
     
     /* Test For Song Artist */
-    XCTAssertEqual([[_testSong artist] isKindOfClass:[NSString class]], true, @"The testSong artist is a NSString.");
+    XCTAssertEqual([[self.testSong artist] isKindOfClass:[NSString class]], true, @"The testSong artist is a NSString.");
     
     /* Test For Song Composer */
-    if ([_testSong composer] != nil) {
-      XCTAssertEqual([[_testSong composer] isKindOfClass:[NSString class]], true, @"The testSong composer is a NSString.");
+    if ([self.testSong composer] != nil) {
+      XCTAssertEqual([[self.testSong composer] isKindOfClass:[NSString class]], true, @"The testSong composer is a NSString.");
     } else {
-        XCTAssertEqual([_testSong composer] == nil, true, @"The testSong composer is a NSString.");
+        XCTAssertEqual([self.testSong composer] == nil, true, @"The testSong composer is a NSString.");
     }
     
     /* Test For Song Album */
-    if ([_testSong album] != nil) {
-        XCTAssertEqual([[_testSong album] isKindOfClass:[NSString class]], true, @"The testSong album is a NSString.");
+    if ([self.testSong album] != nil) {
+        XCTAssertEqual([[self.testSong album] isKindOfClass:[NSString class]], true, @"The testSong album is a NSString.");
     } else {
-        XCTAssertEqual([_testSong album] == nil, true, @"The testSong album is a NSString.");
+        XCTAssertEqual([self.testSong album] == nil, true, @"The testSong album is a NSString.");
     }
     
     /* Test For Song TrackNumber */
-    if ([_testSong trackNumber]) {
-        XCTAssertEqual([_testSong trackNumber] > 0, true, @"The testSong trackNumber is a NSUInteger.");
+    if ([self.testSong trackNumber]) {
+        XCTAssertEqual([self.testSong trackNumber] > 0, true, @"The testSong trackNumber is a NSUInteger.");
     }
     
     /* Test For Song Genre */
-    if ([_testSong genre] != nil) {
-        XCTAssertEqual([[_testSong genre] isKindOfClass:[NSString class]], true, @"The testSong genre is a NSString.");
+    if ([self.testSong genre] != nil) {
+        XCTAssertEqual([[self.testSong genre] isKindOfClass:[NSString class]], true, @"The testSong genre is a NSString.");
     } else {
-        XCTAssertEqual([_testSong genre] == nil, true, @"The testSong genre is a NSString and not defined.");
+        XCTAssertEqual([self.testSong genre] == nil, true, @"The testSong genre is a NSString and not defined.");
     }
     
     /* Test For Song totalTime */
-    if ([_testSong totalTime]) {
-        XCTAssertEqual([_testSong totalTime] > 0, true, @"The testSong totalTime is a NSUInteger.");
+    if ([self.testSong totalTime]) {
+        XCTAssertEqual([self.testSong totalTime] > 0, true, @"The testSong totalTime is a NSUInteger.");
     }
     
     /* Test For Song Rating */
-    if ([_testSong rating]) {
-        XCTAssertEqual([_testSong rating] > 0, true, @"The testSong rating is a NSUInteger.");
+    if ([self.testSong rating]) {
+        XCTAssertEqual([self.testSong rating] > 0, true, @"The testSong rating is a NSUInteger.");
     }
     
     /* Test For Song releaseDate */
-    if ([_testSong releaseDate] != nil) {
-        XCTAssertEqual([[_testSong releaseDate] isKindOfClass:[NSDate class]], true, @"The testSong releaseDate is a NSDate.");
+    if ([self.testSong releaseDate] != nil) {
+        XCTAssertEqual([[self.testSong releaseDate] isKindOfClass:[NSDate class]], true, @"The testSong releaseDate is a NSDate.");
     } else {
-        XCTAssertEqual([_testSong releaseDate] == nil, true, @"The testSong releaseDate is a NSDate.");
+        XCTAssertEqual([self.testSong releaseDate] == nil, true, @"The testSong releaseDate is a NSDate.");
     }
     
     /* Test For Song year */
-    if ([_testSong year]) {
-        XCTAssertEqual([_testSong year] > 0, true, @"The testSong year is a NSUInteger.");
+    if ([self.testSong year]) {
+        XCTAssertEqual([self.testSong year] > 0, true, @"The testSong year is a NSUInteger.");
     }
     
     /* Test For Song beatsPerMinute */
-    if ([_testSong beatsPerMinute]) {
-        XCTAssertEqual([_testSong beatsPerMinute] > 0, true, @"The testSong beatsPerMinute is a NSUInteger.");
+    if ([self.testSong beatsPerMinute]) {
+        XCTAssertEqual([self.testSong beatsPerMinute] > 0, true, @"The testSong beatsPerMinute is a NSUInteger.");
     }
     
     /* Test For Song File Location */
-    if ([_testSong location] != nil) {
-        XCTAssertEqual([[_testSong location] isKindOfClass:[NSURL class]], true, @"The testSong location is a NSURL.");
+    if ([self.testSong location] != nil) {
+        XCTAssertEqual([[self.testSong location] isKindOfClass:[NSURL class]], true, @"The testSong location is a NSURL.");
     } else {
-        XCTAssertEqual([_testSong location] == nil, true, @"The testSong location is a NSURL.");
+        XCTAssertEqual([self.testSong location] == nil, true, @"The testSong location is a NSURL.");
     }
     
     /* Test For Song locationType */
-    if ([_testSong locationType]) {
-        XCTAssertEqual([_testSong locationType] >= 0, true, @"The testSong composer is a NSUInteger.");
+    if ([self.testSong locationType]) {
+        XCTAssertEqual([self.testSong locationType] >= 0, true, @"The testSong composer is a NSUInteger.");
     }
 }
 

@@ -40,8 +40,8 @@
  */
 - (id) initWithSource:(NSString *)sourceName {
     if (self = [super init]) {
-        _source = sourceName;
-        _albums = [[NSMutableArray alloc] init];
+        self.source = sourceName;
+        self.albums = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -52,8 +52,8 @@
  * @param album - a new album object to add to the albums array.
  */
 - (void) addAlbum:(QMAlbum *)album {
-    [_albums addObject:album];
-    _albumCount++;
+    [self.albums addObject:album];
+    self.albumCount++;
 }
 
 /**
@@ -63,7 +63,7 @@
  *     albums in the library.
  */
 - (NSMutableArray *) getAlbums {
-    return _albums;
+    return self.albums;
 }
 
 /**
@@ -74,8 +74,8 @@
  *     returns nil if there is no album at the specified index.
  */
 - (QMAlbum *) getAlbumById:(NSUInteger)albumID {
-    if (albumID < [_albums count]) {
-        return _albums[albumID];
+    if (albumID < [self.albums count]) {
+        return self.albums[albumID];
     }
     return nil;
 }
@@ -90,10 +90,9 @@
 - (NSMutableArray *) getAlbumByArtist:(NSString *)artist {
     NSMutableArray *albumsFromArtist = [[NSMutableArray alloc] init];
     
-    for (int x = 0; x < _albumCount; x++) {
-        if ([artist isEqualToString:[[_albums objectAtIndex:x] albumArtist]]) {
-            //return [_albums objectAtIndex:x];
-            [albumsFromArtist addObject:[_albums objectAtIndex:x]];
+    for (int x = 0; x < self.albumCount; x++) {
+        if ([artist isEqualToString:[[self.albums objectAtIndex:x] albumArtist]]) {
+            [albumsFromArtist addObject:[self.albums objectAtIndex:x]];
         }
     }
     
@@ -119,10 +118,10 @@
     NSString *albumTitle = song.album;
     NSString *albumArtist = song.artist;
     
-    for (int x = 0; x < _albumCount; x++) {
-        if ([albumTitle isEqualToString:[[_albums objectAtIndex:x] albumTitle]]) {
-            if ([albumArtist isEqualToString:[[_albums objectAtIndex:x] albumArtist]]) {
-                return [_albums objectAtIndex:x];
+    for (int x = 0; x < self.albumCount; x++) {
+        if ([albumTitle isEqualToString:[[self.albums objectAtIndex:x] albumTitle]]) {
+            if ([albumArtist isEqualToString:[[self.albums objectAtIndex:x] albumArtist]]) {
+                return [self.albums objectAtIndex:x];
             }
         }
     }

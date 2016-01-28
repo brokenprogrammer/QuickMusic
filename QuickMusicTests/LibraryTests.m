@@ -41,7 +41,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _testLib = [QMImporter importITLib];
+    self.testLib = [QMImporter importITLib];
 }
 
 - (void)tearDown {
@@ -50,60 +50,60 @@
 }
 
 - (void)testLibraryType {
-    XCTAssertEqual([_testLib isKindOfClass:[QMLibrary class]], true, @"The testLib is a Library Object.");
+    XCTAssertEqual([self.testLib isKindOfClass:[QMLibrary class]], true, @"The testLib is a Library Object.");
 }
 
 - (void)testLibraryValues {
-    XCTAssertEqual([[_testLib source ]isKindOfClass:[NSString class]], true, @"The testLib's source is a NSString Object.");
+    XCTAssertEqual([[self.testLib source ]isKindOfClass:[NSString class]], true, @"The testLib's source is a NSString Object.");
     
-    XCTAssertEqual([[_testLib albums] isKindOfClass:[NSMutableArray class]], true, @"The testLib's albums array is a NSMutableArray Object.");
+    XCTAssertEqual([[self.testLib albums] isKindOfClass:[NSMutableArray class]], true, @"The testLib's albums array is a NSMutableArray Object.");
     
     QMAlbum *newAlbum = [[QMAlbum alloc] initWithTitle:@"testAlbum"];
-    [_testLib addAlbum:newAlbum];
-    XCTAssertEqual([[_testLib albums] count] >= 0, true, @"The testLib's albums is an NSMutableArray Object.");
+    [self.testLib addAlbum:newAlbum];
+    XCTAssertEqual([[self.testLib albums] count] >= 0, true, @"The testLib's albums is an NSMutableArray Object.");
     
-    XCTAssertEqual([_testLib albumCount] >= 0, true, @"The testLib's albumCount is a NSUInteger Object.");
+    XCTAssertEqual([self.testLib albumCount] >= 0, true, @"The testLib's albumCount is a NSUInteger Object.");
 }
 
 - (void)testAddAlbum {
-    NSUInteger lastAlbumCount = [[_testLib albums] count];
+    NSUInteger lastAlbumCount = [[self.testLib albums] count];
     QMAlbum *newAlbum = [[QMAlbum alloc] initWithTitle:@"testAlbum"];
     
-    [_testLib addAlbum:newAlbum];
+    [self.testLib addAlbum:newAlbum];
     
-    XCTAssertGreaterThan([[_testLib albums] count], lastAlbumCount, @"Successfully added album to library.");
+    XCTAssertGreaterThan([[self.testLib albums] count], lastAlbumCount, @"Successfully added album to library.");
 }
 
 - (void)testGetAlbums {
     QMAlbum *newAlbum = [[QMAlbum alloc] initWithTitle:@"testAlbum"];
-    [_testLib addAlbum:newAlbum];
+    [self.testLib addAlbum:newAlbum];
     
-    NSUInteger newAlbumCount = [[_testLib albums] count] -1;
+    NSUInteger newAlbumCount = [[self.testLib albums] count] -1;
     
-    XCTAssertEqual([[[_testLib getAlbums] objectAtIndex:newAlbumCount] isKindOfClass:[QMAlbum class]], true, @"getAlbums returns all albums.");
+    XCTAssertEqual([[[self.testLib getAlbums] objectAtIndex:newAlbumCount] isKindOfClass:[QMAlbum class]], true, @"getAlbums returns all albums.");
     
-    XCTAssertEqual([[[_testLib getAlbums] objectAtIndex:newAlbumCount] albumTitle], @"testAlbum", @"The testLib's latest Albums titles match");
+    XCTAssertEqual([[[self.testLib getAlbums] objectAtIndex:newAlbumCount] albumTitle], @"testAlbum", @"The testLib's latest Albums titles match");
 }
 
 - (void)testGetAlbumByID {
     QMAlbum *newAlbum = [[QMAlbum alloc] initWithTitle:@"testAlbum"];
     
-    [_testLib addAlbum:newAlbum];
+    [self.testLib addAlbum:newAlbum];
     
-    NSUInteger songAmmount = [[_testLib albums] count] - 1;
+    NSUInteger songAmmount = [[self.testLib albums] count] - 1;
     
-    XCTAssertEqual([[_testLib getAlbumById:songAmmount] isKindOfClass:[QMAlbum class]], true, @"getAlbumByID returns the Album at the specified index.");
-    XCTAssertEqual([[_testLib getAlbumById:songAmmount] albumTitle], @"testAlbum", @"Titles for getAlbumByID is matching.");
+    XCTAssertEqual([[self.testLib getAlbumById:songAmmount] isKindOfClass:[QMAlbum class]], true, @"getAlbumByID returns the Album at the specified index.");
+    XCTAssertEqual([[self.testLib getAlbumById:songAmmount] albumTitle], @"testAlbum", @"Titles for getAlbumByID is matching.");
 }
 
 - (void)testGetAlbumByArtist {
     QMAlbum *newAlbum = [[QMAlbum alloc] initWithTitleAndArtist:@"testAlbum" :@"testArtist"];
     
-    [_testLib addAlbum:newAlbum];
+    [self.testLib addAlbum:newAlbum];
     
-    XCTAssertEqual([[_testLib getAlbumByArtist:@"testArtist"] isKindOfClass:[NSMutableArray class]], true, @"getAlbumByArtist returns an NSMutableArray.");
+    XCTAssertEqual([[self.testLib getAlbumByArtist:@"testArtist"] isKindOfClass:[NSMutableArray class]], true, @"getAlbumByArtist returns an NSMutableArray.");
     
-    XCTAssertEqual([[[_testLib getAlbumByArtist:@"testArtist"] objectAtIndex:0] albumTitle], @"testAlbum", @"Titles for getAlbumByArtist is matching.");
+    XCTAssertEqual([[[self.testLib getAlbumByArtist:@"testArtist"] objectAtIndex:0] albumTitle], @"testAlbum", @"Titles for getAlbumByArtist is matching.");
 }
 
 - (void)testGetAlbumBySong {
@@ -114,10 +114,10 @@
     QMAlbum *newAlbum = [[QMAlbum alloc] initWithTitleAndArtist:@"testAlbum" :@"testArtist"];
     
     [newAlbum addSong:newSong];
-    [_testLib addAlbum:newAlbum];
+    [self.testLib addAlbum:newAlbum];
     
-    XCTAssertEqual([[_testLib getAlbumBySong:newSong] isKindOfClass:[QMAlbum class]], true, @"getAlbumBySong return an Album.");
-    XCTAssertEqual([[_testLib getAlbumBySong:newSong] albumTitle], @"testAlbum", @"Titles for getAlbumBySong is matching.");
+    XCTAssertEqual([[self.testLib getAlbumBySong:newSong] isKindOfClass:[QMAlbum class]], true, @"getAlbumBySong return an Album.");
+    XCTAssertEqual([[self.testLib getAlbumBySong:newSong] albumTitle], @"testAlbum", @"Titles for getAlbumBySong is matching.");
 }
 
 @end

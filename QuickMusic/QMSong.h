@@ -34,26 +34,26 @@
     
 }
 
-@property NSString* title;           /* Song Title */
-@property NSString* artist;          /* Song Artist */
-@property NSString* composer;        /* Song Composer */
-@property NSString* album;           /* Song Album Title */
-@property NSUInteger trackNumber;    /* Song TrackNumber */
-@property NSString* genre;           /* Song Genre */
-@property NSUInteger totalTime;      /* Song Total RunTime */
+@property (nonatomic, strong) NSString* title;           /* Song Title */
+@property (nonatomic, strong) NSString* artist;          /* Song Artist */
+@property (nonatomic, strong) NSString* composer;        /* Song Composer */
+@property (nonatomic, strong) NSString* album;           /* Song Album Title */
+@property (nonatomic) NSUInteger trackNumber;    /* Song TrackNumber */
+@property (nonatomic, strong) NSString* genre;           /* Song Genre */
+@property (nonatomic) NSUInteger totalTime;      /* Song Total RunTime */
 
-@property NSInteger rating;          /* Song Rating */
-@property NSDate* releaseDate;       /* Song Release Date */
-@property NSUInteger year;           /* Song Release Year */
+@property (nonatomic) NSInteger rating;          /* Song Rating */
+@property (nonatomic, strong) NSDate* releaseDate;       /* Song Release Date */
+@property (nonatomic) NSUInteger year;           /* Song Release Year */
 
-@property NSUInteger beatsPerMinute; /* Song Beats Per Minute BPM */
-@property NSURL* location;           /* Song File Path */
-@property NSUInteger locationType;   /* Song LocationType (File, URL, Remote) */
+@property (nonatomic) NSUInteger beatsPerMinute; /* Song Beats Per Minute BPM */
+@property (nonatomic, strong) NSURL* location;           /* Song File Path */
+@property (nonatomic) NSUInteger locationType;   /* Song LocationType (File, URL, Remote) */
 
 //Initialize using only a title
-- (id) initWithTitle:(NSString *)title;
+- (id) initWithTitle:(NSString *)songTitle;
 //Initialize using only a file location
-- (id) initWithLocation: (NSURL *)location;
+- (id) initWithLocation: (NSURL *)songLocation;
 //Initialize using the information from an iTunes Media Item
 - (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
 @end
