@@ -33,7 +33,7 @@
 }
 
 @property (nonatomic, strong) NSString* albumTitle;        /* Album Title */
-@property (nonatomic) NSUInteger* albumTrackCount; /* Ammount of tracks in album */
+@property (nonatomic) NSUInteger* albumTrackCount;         /* Ammount of tracks in album */
 @property (nonatomic, strong) NSString* albumArtist;       /* Album Artist */
 
 @property (nonatomic, strong) NSMutableArray* albumSongs;  /* Array of songs owned by Album */

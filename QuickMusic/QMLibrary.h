@@ -35,7 +35,7 @@
 
 @property (nonatomic, strong) const NSString* source; /* Source of the import */
 @property (nonatomic, strong) NSMutableArray* albums; /* Array of albums */
-@property (nonatomic )NSUInteger albumCount;  /* Ammount of albums */
+@property (nonatomic )NSUInteger albumCount;          /* Ammount of albums */
 
 //Initialize with sourcename
 - (id) initWithSource:(NSString *)sourceName;

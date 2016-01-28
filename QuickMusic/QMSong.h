@@ -38,17 +38,17 @@
 @property (nonatomic, strong) NSString* artist;          /* Song Artist */
 @property (nonatomic, strong) NSString* composer;        /* Song Composer */
 @property (nonatomic, strong) NSString* album;           /* Song Album Title */
-@property (nonatomic) NSUInteger trackNumber;    /* Song TrackNumber */
+@property (nonatomic) NSUInteger trackNumber;            /* Song TrackNumber */
 @property (nonatomic, strong) NSString* genre;           /* Song Genre */
-@property (nonatomic) NSUInteger totalTime;      /* Song Total RunTime */
+@property (nonatomic) NSUInteger totalTime;              /* Song Total RunTime */
 
-@property (nonatomic) NSInteger rating;          /* Song Rating */
+@property (nonatomic) NSInteger rating;                  /* Song Rating */
 @property (nonatomic, strong) NSDate* releaseDate;       /* Song Release Date */
-@property (nonatomic) NSUInteger year;           /* Song Release Year */
+@property (nonatomic) NSUInteger year;                   /* Song Release Year */
 
-@property (nonatomic) NSUInteger beatsPerMinute; /* Song Beats Per Minute BPM */
+@property (nonatomic) NSUInteger beatsPerMinute;         /* Song Beats Per Minute BPM */
 @property (nonatomic, strong) NSURL* location;           /* Song File Path */
-@property (nonatomic) NSUInteger locationType;   /* Song LocationType (File, URL, Remote) */
+@property (nonatomic) NSUInteger locationType;           /* Song LocationType (File, URL, Remote) */
 
 //Initialize using only a title
 - (id) initWithTitle:(NSString *)songTitle;

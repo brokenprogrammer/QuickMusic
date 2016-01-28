@@ -37,6 +37,7 @@ int main(int argc, const char * argv[]) {
     NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] albumTitle]);
     NSLog(@"%@", [MyLib getAlbums]);
     NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] albumSongs] count]);
+    NSLog(@"%lu", (unsigned long)[MyLib valueForKeyPath:@"albums.@count"]);
     NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:0] title]);
     return NSApplicationMain(argc, argv);
 }

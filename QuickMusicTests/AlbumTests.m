@@ -56,6 +56,15 @@
 
 - (void)testAlbumValues {
     XCTAssertEqual([self.testAlbum isKindOfClass:[QMAlbum class]], true, @"The testAlbum is a Album Object.");
+    
+    XCTAssertEqual([[self.testAlbum albumTitle] isKindOfClass:[NSString class]], true, @"The albumTitle is a NSString");
+    
+    XCTAssertEqual([self.testAlbum albumTrackCount] >= 0, true, @"The albumTrackCount is a NSUInteger");
+    
+    XCTAssertEqual([[self.testAlbum albumArtist] isKindOfClass:[NSString class]], true, @"The albumArtist is a NSString");
+    
+    XCTAssertEqual([[self.testAlbum albumSongs] isKindOfClass:[NSMutableArray class]], true, @"The albumSongs is a NSMutableArray");
+    
 }
 
 - (void)testAddSong {

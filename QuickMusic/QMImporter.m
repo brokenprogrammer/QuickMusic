@@ -46,45 +46,46 @@
 + (QMLibrary *) importITLib {
     QMLibrary *iTunesLib = [[QMLibrary alloc] initWithSource:@"iTunes"];
     
-    NSError *error = nil;
-    ITLibrary *aLib = [ITLibrary libraryWithAPIVersion:@"1.0" error:&error];
+    @autoreleasepool {
+        NSError *error = nil;
+        ITLibrary *aLib = [ITLibrary libraryWithAPIVersion:@"1.0" error:&error];
     
-    if (aLib) {
-        NSArray *tracks = aLib.allMediaItems;
-        QMAlbum *lastAlbum; /* used to compare songs with the last used album to improve speed. */
+        if (aLib) {
+            NSArray *tracks = aLib.allMediaItems;
+            QMAlbum *lastAlbum; /* used to compare songs with the last used album to improve speed. */
         
-        if (tracks.count >= 1) {
+            if (tracks.count >= 1) {
             
-            for (int i = 0; i < [tracks count]; i++) {
-                ITLibMediaItem *currentMedia = [tracks objectAtIndex:i];
+                for (int i = 0; i < [tracks count]; i++) {
+                    ITLibMediaItem *currentMedia = [tracks objectAtIndex:i];
                 
-                if (currentMedia.mediaKind == 2) {
-                    QMSong *newSong = [[QMSong alloc] initWithMediaItem:currentMedia];
+                    if (currentMedia.mediaKind == 2) {
+                        QMSong *newSong = [[QMSong alloc] initWithMediaItem:currentMedia];
                     
-                    /* Checking if the last used album is the same for this Song*/
-                    if (lastAlbum != nil &&
-                         [newSong.album isEqualToString:lastAlbum.albumTitle] &&
-                            [newSong.artist isEqualToString:lastAlbum.albumArtist]) {
-                        [lastAlbum addSong:newSong];
-                    } else { /* If not try find an existing Album using the getAlbumBySong */
-                        QMAlbum *currentAlbum = [iTunesLib getAlbumBySong:newSong];
-                        if (currentAlbum != nil) { /* If an Album was found place the song into it */
-                            [currentAlbum addSong:newSong];
-                            lastAlbum = currentAlbum;
-                        } else { /* If not then initialize a new Album object and place it into the Library */
-                            currentAlbum = [[QMAlbum alloc] initWithTitleAndArtist:[newSong album] :[newSong artist]];
-                            [currentAlbum addSong:newSong];
-                            [iTunesLib addAlbum:currentAlbum];
-                            lastAlbum = currentAlbum;
+                        /* Checking if the last used album is the same for this Song*/
+                        if (lastAlbum != nil &&
+                            [newSong.album isEqualToString:lastAlbum.albumTitle] &&
+                                [newSong.artist isEqualToString:lastAlbum.albumArtist]) {
+                            [lastAlbum addSong:newSong];
+                        } else { /* If not try find an existing Album using the getAlbumBySong */
+                            QMAlbum *currentAlbum = [iTunesLib getAlbumBySong:newSong];
+                            if (currentAlbum != nil) { /* If an Album was found place the song into it */
+                                [currentAlbum addSong:newSong];
+                                lastAlbum = currentAlbum;
+                            } else { /* If not then initialize a new Album object and place it into the Library */
+                                currentAlbum = [[QMAlbum alloc] initWithTitleAndArtist:[newSong album] :[newSong artist]];
+                                [currentAlbum addSong:newSong];
+                                [iTunesLib addAlbum:currentAlbum];
+                                lastAlbum = currentAlbum;
+                            }
                         }
                     }
                 }
             }
-        }
-    } else {
+        } else {
         NSLog(@"%@", error);
+        }
     }
-    
     return iTunesLib;
 }
 
