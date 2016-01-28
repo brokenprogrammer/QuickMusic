@@ -26,6 +26,9 @@
  */
 
 #import "QMSong.h"
+#import <iTunesLibrary/ITLibMediaItem.h>
+#import <iTunesLibrary/ITLibAlbum.h>
+#import <iTunesLibrary/ITLibArtist.h>
 
 @implementation QMSong {
     
@@ -54,7 +57,7 @@
  * @param title - the title of the Song.
  * @returns the new instance of the Song.
  */
-- (id) initWithTitle:(NSString *)songTitle {
+- (id)initWithTitle:(NSString *)songTitle {
     if (self = [super init]) {
         self.title = songTitle;
     }
@@ -68,7 +71,7 @@
  * @param location - the file location of the Song.
  * @returns the new instance of the Song.
  */
-- (id) initWithLocation:(NSURL *)songLocation {
+- (id)initWithLocation:(NSURL *)songLocation {
     if (self = [super init]) {
         self.location = songLocation;
     }
@@ -82,7 +85,7 @@
  * @param songInfo - iTunes media item containing all information for a Song.
  * @returns the new instance of the Song.
  */
-- (id) initWithMediaItem:(ITLibMediaItem *)songInfo {
+- (id)initWithMediaItem:(ITLibMediaItem *)songInfo {
     if (self = [super init]) {
         self.title = [songInfo title];
         self.artist = [[songInfo artist] name];

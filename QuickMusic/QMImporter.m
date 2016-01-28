@@ -43,7 +43,7 @@
  *
  * @returns a new Library with all the imported music from iTunes.
  */
-+ (QMLibrary *) importITLib {
++ (QMLibrary *)importITLib {
     QMLibrary *iTunesLib = [[QMLibrary alloc] initWithSource:@"iTunes"];
     
     @autoreleasepool {

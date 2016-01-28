@@ -39,17 +39,22 @@
 @property (nonatomic, strong) NSMutableArray* songs;  /* Array of songs owned by Album */
 
 //Initialize using only a title
-- (id) initWithTitle:(NSString *)title;
+- (id)initWithTitle:(NSString *)title;
 //Initialize using title and artist
-- (id) initWithTitleAndArtist:(NSString *)title :(NSString *)artist;
+- (id)initWithTitleAndArtist:(NSString *)title :(NSString *)artist;
 
 //Add new Song to the album
-- (void) addSong:(QMSong *)song;
+- (void)addSong:(QMSong *)song;
 
 //Get Song with the specified title
-- (QMSong *) getSongByTitle:(NSString *)title;
+- (QMSong *)getSongByTitle:(NSString *)title;
 //Get Song at the specified index
-- (QMSong *) getSongByID:(NSUInteger)trackID;
+- (QMSong *)getSongByID:(NSUInteger)trackID;
 
+//Sorting functions
+- (void)sortByTitle;      /* Sorts the songs in alphabetical order by its titles */
+- (void)sortByArtist;     /* Sorts the sogns in alphabetical order by its artists */
+- (void)sortBySongLength; /* Sorts the songs in alphabetical order by its song length */
 
+- (NSMutableArray *)searchAlbum:(NSString *)keyWords;
 @end

@@ -39,5 +39,16 @@ int main(int argc, const char * argv[]) {
     NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] songs] count]);
     NSLog(@"%lu", (unsigned long)[MyLib valueForKeyPath:@"albums.@count"]);
     NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:0] title]);
+    
+    NSLog(@"BEFORE SORT");
+    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
+        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
+    }
+    
+    [[[MyLib getAlbums] objectAtIndex:0] sortBySongLength];
+    NSLog(@"AFTER SORT");
+    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
+        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
+    }
     return NSApplicationMain(argc, argv);
 }

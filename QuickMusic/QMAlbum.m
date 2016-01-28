@@ -36,7 +36,7 @@
  * @param title - the title of the Album.
  * @returns the new instance of the Album.
  */
-- (id) initWithTitle:(NSString *)title {
+- (id)initWithTitle:(NSString *)title {
     if (self = [super init]) {
         self.title = title;
         self.songs = [NSMutableArray array];
@@ -52,7 +52,7 @@
  * @param artist - the artist of the Album.
  * @returns the new instance of the Album.
  */
-- (id) initWithTitleAndArtist:(NSString *)title :(NSString *)artist {
+- (id)initWithTitleAndArtist:(NSString *)title :(NSString *)artist {
     if (self = [super init]) {
         self.title = title;
         self.artist = artist;
@@ -67,7 +67,7 @@
  *     increments the track count.
  * @param song - a new Song object to add to the songs array.
  */
-- (void) addSong:(QMSong *)song {
+- (void)addSong:(QMSong *)song {
     [self.songs addObject:song];
     self.trackCount++;
 }
@@ -79,7 +79,7 @@
  * @returns a Song object with the specified title. Returns nil if no Song
  *    was found.
  */
-- (QMSong *) getSongByTitle:(NSString *)title {
+- (QMSong *)getSongByTitle:(NSString *)title {
     QMSong *song = nil;
     for (int x = 0; x < [self.songs count]; x++) {
         if ([title isEqualToString:[[self.songs objectAtIndex:x] title]]) {
@@ -96,7 +96,7 @@
  * @returns a Song object found at the specified index. Returns nil if 
  *     index doesn't exist.
  */
-- (QMSong *) getSongByID:(NSUInteger)trackID {
+- (QMSong *)getSongByID:(NSUInteger)trackID {
     QMSong *song = nil;
     if (trackID < [self.songs count]) {
         song = self.songs[trackID];
@@ -104,4 +104,41 @@
     return song;
 }
 
+/**
+ * Mutates the songs array owned by the album by sorting the songs by its
+ * song title. Sorting in alphabetical order.
+ */
+- (void)sortByTitle {
+    [self.songs sortUsingDescriptors:
+     [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"title"
+                                                            ascending:YES
+                                                             selector:@selector(caseInsensitiveCompare:)]]];
+}
+
+/**
+ * Mutates the songs array owned by the album by sorting the songs by its
+ * song artist. Sorting in alphabetical order.
+ */
+- (void)sortByArtist {
+    [self.songs sortUsingDescriptors:
+     [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"artist"
+                                                            ascending:YES
+                                                             selector:@selector(caseInsensitiveCompare:)]]];
+}
+
+/**
+ * Mutates the songs array owned by the album by sorting the songs by its
+ * song length. Sorting in the order of shortest to longest.
+ */
+- (void)sortBySongLength{
+    [self.songs sortUsingDescriptors:
+     [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"totalTime"
+                                                            ascending:YES
+                                                             selector:@selector(compare:)]]];
+}
+
+- (NSMutableArray *)searchAlbum:(NSString *)keyWords {
+    
+    return nil;
+}
 @end

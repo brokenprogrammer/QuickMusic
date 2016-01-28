@@ -26,9 +26,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <iTunesLibrary/ITLibMediaItem.h>
-#import <iTunesLibrary/ITLibAlbum.h>
-#import <iTunesLibrary/ITLibArtist.h>
+
+@class ITLibMediaItem;
 
 @interface QMSong : NSObject {
     
@@ -51,9 +50,9 @@
 @property (nonatomic) NSUInteger locationType;         /* Song LocationType (File, URL, Remote) */
 
 //Initialize using only a title
-- (id) initWithTitle:(NSString *)songTitle;
+- (id)initWithTitle:(NSString *)songTitle;
 //Initialize using only a file location
-- (id) initWithLocation: (NSURL *)songLocation;
+- (id)initWithLocation: (NSURL *)songLocation;
 //Initialize using the information from an iTunes Media Item
-- (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
+- (id)initWithMediaItem: (ITLibMediaItem *)songInfo;
 @end

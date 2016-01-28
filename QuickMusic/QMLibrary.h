@@ -38,20 +38,27 @@
 @property (nonatomic )NSUInteger albumCount;          /* Ammount of albums */
 
 //Initialize with sourcename
-- (id) initWithSource:(NSString *)sourceName;
+- (id)initWithSource:(NSString *)sourceName;
 
 //Add new album to library
-- (void) addAlbum:(QMAlbum *)album;
+- (void)addAlbum:(QMAlbum *)album;
 
 //Retrieves all albums
-- (NSMutableArray *) getAlbums;
+- (NSMutableArray *)getAlbums;
 
 //Return Album by its array index
-- (QMAlbum *) getAlbumById:(NSUInteger) albumID;
+- (QMAlbum *)getAlbumById:(NSUInteger) albumID;
 
 //Returns Albums of specific artist
-- (NSMutableArray *) getAlbumByArtist:(NSString *) artist;
+- (NSMutableArray *)getAlbumByArtist:(NSString *) artist;
 
 //Returns Album by using a Songs properties.
-- (QMAlbum *) getAlbumBySong:(QMSong *) song;
+- (QMAlbum *)getAlbumBySong:(QMSong *) song;
+
+//Sorting functions
+- (void)sortByTitle;     /* Sorts the albums in alphabetical order by its titles */
+- (void)sortByArtist;    /* Sorts the albums in alphabetical order by its artists */
+- (void)sortBySongCount; /* Sorts the albums in alphabetical order by its number of songs */
+
+- (NSMutableArray *)searchAlbum:(NSString *)keyWords;
 @end

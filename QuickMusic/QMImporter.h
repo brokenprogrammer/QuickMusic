@@ -39,6 +39,6 @@
 }
 
 //Import iTunes library
-+ (QMLibrary *) importITLib;
++ (QMLibrary *)importITLib;
 
 @end

@@ -38,7 +38,7 @@
  * @param sourceName - name of the source the library was imported from.
  * @returns self instance which is initialized.
  */
-- (id) initWithSource:(NSString *)sourceName {
+- (id)initWithSource:(NSString *)sourceName {
     if (self = [super init]) {
         self.source = sourceName;
         self.albums = [NSMutableArray array];
@@ -51,7 +51,7 @@
  *     increments the album count.
  * @param album - a new album object to add to the albums array.
  */
-- (void) addAlbum:(QMAlbum *)album {
+- (void)addAlbum:(QMAlbum *)album {
     [self.albums addObject:album];
     self.albumCount++;
 }
@@ -62,7 +62,7 @@
  * @returns the NSMutableArray albums which contains all the
  *     albums in the library.
  */
-- (NSMutableArray *) getAlbums {
+- (NSMutableArray *)getAlbums {
     return self.albums;
 }
 
@@ -73,7 +73,7 @@
  * @returns Album from the albums array at index of albumID. 
  *     returns nil if there is no album at the specified index.
  */
-- (QMAlbum *) getAlbumById:(NSUInteger)albumID {
+- (QMAlbum *)getAlbumById:(NSUInteger)albumID {
     QMAlbum *album = nil;
     if (albumID < [self.albums count]) {
         album = self.albums[albumID];
@@ -88,12 +88,12 @@
  * @returns Array of albums that has the specified artist.
  *     returns nil if artist not found in any albums.
  */
-- (NSMutableArray *) getAlbumByArtist:(NSString *)artist {
+- (NSMutableArray *)getAlbumByArtist:(NSString *)artist {
     NSMutableArray *albumsFromArtist = [NSMutableArray array];
     
     for (int x = 0; x < self.albumCount; x++) {
         //Have to do typeCast because XCode thinks im referring to ITLibArtist
-        if ([artist isEqualToString:(NSString *)[[self.albums objectAtIndex:x] artist]]) {
+        if ([artist isEqualToString:[[self.albums objectAtIndex:x] artist]]) {
             [albumsFromArtist addObject:[self.albums objectAtIndex:x]];
         }
     }
@@ -115,7 +115,7 @@
  *     song has any matches inside the albums array. Returns nil
  *     if there was no matches.
  */
-- (QMAlbum *) getAlbumBySong:(QMSong *)song {
+- (QMAlbum *)getAlbumBySong:(QMSong *)song {
     QMAlbum *album = nil;
     NSString *albumTitle = song.album;
     NSString *albumArtist = song.artist;
@@ -123,11 +123,49 @@
     for (int x = 0; x < self.albumCount; x++) {
         if ([albumTitle isEqualToString:[[self.albums objectAtIndex:x] title]]) {
             //Have to do typeCast because XCode thinks im referring to ITLibArtist
-            if ([albumArtist isEqualToString:(NSString *)[[self.albums objectAtIndex:x] artist]]) {
+            if ([albumArtist isEqualToString:[[self.albums objectAtIndex:x] artist]]) {
                 album = [self.albums objectAtIndex:x];
             }
         }
     }
     return album;
+}
+
+/**
+ * Mutates the albums array owned by the library by sorting the albums by its
+ * album title. Sorting in alphabetical order.
+ */
+- (void)sortByTitle {
+    [self.albums sortUsingDescriptors:
+     [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"title"
+                                                            ascending:YES
+                                                             selector:@selector(caseInsensitiveCompare:)]]];
+}
+
+/**
+ * Mutates the albums array owned by the library by sorting the albums by its
+ * album artist. Sorting in alphabetical order.
+ */
+- (void)sortByArtist {
+    [self.albums sortUsingDescriptors:
+     [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"artist"
+                                                            ascending:YES
+                                                             selector:@selector(caseInsensitiveCompare:)]]];
+}
+
+/**
+ * Mutates the albums array owned by the library by sorting the albums by its
+ * album song count. Sorting in alphabetical order.
+ */
+- (void)sortBySongCount{
+    [self.albums sortUsingDescriptors:
+     [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"trackCount"
+                                                            ascending:YES
+                                                             selector:@selector(compare:)]]];
+}
+
+- (NSMutableArray *)searchAlbum:(NSString *)keyWords {
+    
+    return nil;
 }
 @end
