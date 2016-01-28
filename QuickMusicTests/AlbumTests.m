@@ -7,14 +7,14 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Importer.h"
-#import "Library.h"
-#import "Album.h"
-#import "Song.h"
+#import "QMImporter.h"
+#import "QMLibrary.h"
+#import "QMAlbum.h"
+#import "QMSong.h"
 
 @interface AlbumTests : XCTestCase
 
-@property (nonatomic) Album* testAlbum;
+@property (nonatomic) QMAlbum* testAlbum;
 
 @end
 
@@ -23,7 +23,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _testAlbum = [[[Importer importITLib] getAlbums] objectAtIndex:0];
+    _testAlbum = [[[QMImporter importITLib] getAlbums] objectAtIndex:0];
 }
 
 - (void)tearDown {
@@ -32,16 +32,16 @@
 }
 
 - (void)testAlbumType {
-    XCTAssertEqual([_testAlbum isKindOfClass:[Album class]], true, @"The testAlbum is a Album Object.");
+    XCTAssertEqual([_testAlbum isKindOfClass:[QMAlbum class]], true, @"The testAlbum is a Album Object.");
 }
 
 - (void)testAlbumValues {
-    XCTAssertEqual([_testAlbum isKindOfClass:[Album class]], true, @"The testAlbum is a Album Object.");
+    XCTAssertEqual([_testAlbum isKindOfClass:[QMAlbum class]], true, @"The testAlbum is a Album Object.");
 }
 
 - (void)testAddSong {
     NSUInteger songAmmount = [[_testAlbum albumSongs] count];
-    Song *newSong = [[Song alloc] initWithTitle:@"A New Song"];
+    QMSong *newSong = [[QMSong alloc] initWithTitle:@"A New Song"];
     
     [_testAlbum addSong:newSong];
     
@@ -49,22 +49,22 @@
 }
 
 - (void)testGetSongByTitle {
-    Song *newSong = [[Song alloc] initWithTitle:@"TestTitle"];
+    QMSong *newSong = [[QMSong alloc] initWithTitle:@"TestTitle"];
     
     [_testAlbum addSong:newSong];
     
-    XCTAssertEqual([[_testAlbum getSongByTitle:@"TestTitle"] isKindOfClass:[Song class]], true, @"getSongByTitle returns a song with matching title");
+    XCTAssertEqual([[_testAlbum getSongByTitle:@"TestTitle"] isKindOfClass:[QMSong class]], true, @"getSongByTitle returns a song with matching title");
     XCTAssertEqual([[_testAlbum getSongByTitle:@"TestTitle"] title], @"TestTitle", @"Titles for getSongByTitle is matching.");
 }
 
 - (void)testGetSongByID {
-    Song *newSong = [[Song alloc] initWithTitle:@"TestTitle"];
+    QMSong *newSong = [[QMSong alloc] initWithTitle:@"TestTitle"];
     
     [_testAlbum addSong:newSong];
     
     NSUInteger songAmmount = [[_testAlbum albumSongs] count] - 1;
     
-    XCTAssertEqual([[_testAlbum getSongByID:songAmmount] isKindOfClass:[Song class]], true, @"getSongByID returns the song at the specified index.");
+    XCTAssertEqual([[_testAlbum getSongByID:songAmmount] isKindOfClass:[QMSong class]], true, @"getSongByID returns the song at the specified index.");
     XCTAssertEqual([[_testAlbum getSongByID:songAmmount] title], @"TestTitle", @"Titles for getSongByID is matching.");
 }
 

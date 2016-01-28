@@ -6,14 +6,11 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#ifndef Library_h
-#define Library_h
-
 #import <Foundation/Foundation.h>
-#import "Album.h"
-#import "Song.h"
+#import "QMAlbum.h"
+#import "QMSong.h"
 
-@interface Library : NSObject {
+@interface QMLibrary : NSObject {
     
 }
 
@@ -25,19 +22,17 @@
 - (id) initWithSource:(NSString *)sourceName;
 
 //Add new album to library
-- (void) addAlbum:(Album *)album;
+- (void) addAlbum:(QMAlbum *)album;
 
 //Retrieves all albums
 - (NSMutableArray *) getAlbums;
 
 //Return Album by its array index
-- (Album *) getAlbumById:(NSUInteger) albumID;
+- (QMAlbum *) getAlbumById:(NSUInteger) albumID;
 
 //Returns Albums of specific artist
 - (NSMutableArray *) getAlbumByArtist:(NSString *) artist;
 
 //Returns Album by using a Songs properties.
-- (Album *) getAlbumBySong:(Song *) song;
+- (QMAlbum *) getAlbumBySong:(QMSong *) song;
 @end
-
-#endif /* Library_h */

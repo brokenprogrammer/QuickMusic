@@ -6,13 +6,10 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#ifndef Album_h
-#define Album_h
-
 #import <Foundation/Foundation.h>
-#import "Song.h"
+#import "QMSong.h"
 
-@interface Album : NSObject {
+@interface QMAlbum : NSObject {
     
 }
 
@@ -28,14 +25,12 @@
 - (id) initWithTitleAndArtist:(NSString *)title :(NSString *)artist;
 
 //Add new Song to the album
-- (void) addSong:(Song *)song;
+- (void) addSong:(QMSong *)song;
 
 //Get Song with the specified title
-- (Song *) getSongByTitle:(NSString *)title;
+- (QMSong *) getSongByTitle:(NSString *)title;
 //Get Song at the specified index
-- (Song *) getSongByID:(NSUInteger)trackID;
+- (QMSong *) getSongByID:(NSUInteger)trackID;
 
 
 @end
-
-#endif /* Album_h */

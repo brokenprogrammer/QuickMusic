@@ -6,9 +6,9 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#import "Library.h"
+#import "QMLibrary.h"
 
-@implementation Library {
+@implementation QMLibrary {
     
 }
 
@@ -32,7 +32,7 @@
  *     increments the album count.
  * @param album - a new album object to add to the albums array.
  */
-- (void) addAlbum:(Album *)album {
+- (void) addAlbum:(QMAlbum *)album {
     [_albums addObject:album];
     _albumCount++;
 }
@@ -54,7 +54,7 @@
  * @returns Album from the albums array at index of albumID. 
  *     returns nil if there is no album at the specified index.
  */
-- (Album *) getAlbumById:(NSUInteger)albumID {
+- (QMAlbum *) getAlbumById:(NSUInteger)albumID {
     if (albumID < [_albums count]) {
         return _albums[albumID];
     }
@@ -96,7 +96,7 @@
  *     song has any matches inside the albums array. Returns nil
  *     if there was no matches.
  */
-- (Album *) getAlbumBySong:(Song *)song {
+- (QMAlbum *) getAlbumBySong:(QMSong *)song {
     NSString *albumTitle = song.album;
     NSString *albumArtist = song.artist;
     

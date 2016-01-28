@@ -6,15 +6,12 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#ifndef Song_h
-#define Song_h
-
 #import <Foundation/Foundation.h>
 #import <iTunesLibrary/ITLibMediaItem.h>
 #import <iTunesLibrary/ITLibAlbum.h>
 #import <iTunesLibrary/ITLibArtist.h>
 
-@interface Song : NSObject {
+@interface QMSong : NSObject {
     
 }
 
@@ -41,5 +38,3 @@
 //Initialize using the information from an iTunes Media Item
 - (id) initWithMediaItem: (ITLibMediaItem *)songInfo;
 @end
-
-#endif /* Song_h */

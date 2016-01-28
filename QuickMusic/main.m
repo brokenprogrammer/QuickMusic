@@ -7,13 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Importer.h"
-#import "Library.h"
-#import "Album.h"
+#import "QMImporter.h"
+#import "QMLibrary.h"
+#import "QMAlbum.h"
 #import <iTunesLibrary/ITLibrary.h>
 
 int main(int argc, const char * argv[]) {
-    Library *MyLib = [Importer importITLib];
+    QMLibrary *MyLib = [QMImporter importITLib];
     
     NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] albumTitle]);
     NSLog(@"%@", [MyLib getAlbums]);

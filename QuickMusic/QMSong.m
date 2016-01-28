@@ -6,9 +6,9 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#import "Song.h"
+#import "QMSong.h"
 
-@implementation Song {
+@implementation QMSong {
     
 }
 

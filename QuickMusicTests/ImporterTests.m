@@ -7,8 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Importer.h"
-#import "Library.h"
+#import "QMImporter.h"
+#import "QMLibrary.h"
 
 @interface ImporterTests : XCTestCase
 
@@ -30,8 +30,8 @@
 }
 
 - (void)testImporter {
-    Library *importedLib = [Importer importITLib];
-    XCTAssertEqual([importedLib isKindOfClass:[Library class]], true, @"Imported Library is a new Library Object.");
+    QMLibrary *importedLib = [QMImporter importITLib];
+    XCTAssertEqual([importedLib isKindOfClass:[QMLibrary class]], true, @"Imported Library is a new Library Object.");
 }
 
 @end

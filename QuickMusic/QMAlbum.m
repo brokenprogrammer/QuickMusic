@@ -6,9 +6,9 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#import "Album.h"
+#import "QMAlbum.h"
 
-@implementation Album {
+@implementation QMAlbum {
     
 }
 /**
@@ -48,7 +48,7 @@
  *     increments the track count.
  * @param song - a new Song object to add to the songs array.
  */
-- (void) addSong:(Song *)song {
+- (void) addSong:(QMSong *)song {
     [_albumSongs addObject:song];
     _albumTrackCount++;
 }
@@ -60,7 +60,7 @@
  * @returns a Song object with the specified title. Returns nil if no Song
  *    was found.
  */
-- (Song *) getSongByTitle:(NSString *)title {
+- (QMSong *) getSongByTitle:(NSString *)title {
     for (int x = 0; x < [_albumSongs count]; x++) {
         if ([title isEqualToString:[[_albumSongs objectAtIndex:x] title]]) {
             return [_albumSongs objectAtIndex:x];
@@ -76,7 +76,7 @@
  * @returns a Song object found at the specified index. Returns nil if 
  *     index doesn't exist.
  */
-- (Song *) getSongByID:(NSUInteger)trackID {
+- (QMSong *) getSongByID:(NSUInteger)trackID {
     if (trackID < [_albumSongs count]) {
         return _albumSongs[trackID];
     }

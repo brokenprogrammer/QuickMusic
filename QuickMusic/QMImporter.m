@@ -6,9 +6,9 @@
 //  Copyright © 2016 Oskar Mendel. All rights reserved.
 //
 
-#import "Importer.h"
+#import "QMImporter.h"
 
-@implementation Importer {
+@implementation QMImporter {
     //Private instance variables
 }
 
@@ -24,15 +24,15 @@
  *
  * @returns a new Library with all the imported music from iTunes.
  */
-+ (Library *) importITLib {
-    Library *iTunesLib = [[Library alloc] initWithSource:@"iTunes"];
++ (QMLibrary *) importITLib {
+    QMLibrary *iTunesLib = [[QMLibrary alloc] initWithSource:@"iTunes"];
     
     NSError *error = nil;
     ITLibrary *aLib = [ITLibrary libraryWithAPIVersion:@"1.0" error:&error];
     
     if (aLib) {
         NSArray *tracks = aLib.allMediaItems;
-        Album *lastAlbum; /* used to compare songs with the last used album to improve speed. */
+        QMAlbum *lastAlbum; /* used to compare songs with the last used album to improve speed. */
         
         if (tracks.count >= 1) {
             
@@ -40,7 +40,7 @@
                 ITLibMediaItem *currentMedia = [tracks objectAtIndex:i];
                 
                 if (currentMedia.mediaKind == 2) {
-                    Song *newSong = [[Song alloc] initWithMediaItem:currentMedia];
+                    QMSong *newSong = [[QMSong alloc] initWithMediaItem:currentMedia];
                     
                     /* Checking if the last used album is the same for this Song*/
                     if (lastAlbum != nil &&
@@ -48,12 +48,12 @@
                             [newSong.artist isEqualToString:lastAlbum.albumArtist]) {
                         [lastAlbum addSong:newSong];
                     } else { /* If not try find an existing Album using the getAlbumBySong */
-                        Album *currentAlbum = [iTunesLib getAlbumBySong:newSong];
+                        QMAlbum *currentAlbum = [iTunesLib getAlbumBySong:newSong];
                         if (currentAlbum != nil) { /* If an Album was found place the song into it */
                             [currentAlbum addSong:newSong];
                             lastAlbum = currentAlbum;
                         } else { /* If not then initialize a new Album object and place it into the Library */
-                            currentAlbum = [[Album alloc] initWithTitleAndArtist:[newSong album] :[newSong artist]];
+                            currentAlbum = [[QMAlbum alloc] initWithTitleAndArtist:[newSong album] :[newSong artist]];
                             [currentAlbum addSong:newSong];
                             [iTunesLib addAlbum:currentAlbum];
                             lastAlbum = currentAlbum;

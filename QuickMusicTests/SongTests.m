@@ -7,14 +7,14 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Importer.h"
-#import "Library.h"
-#import "Album.h"
-#import "Song.h"
+#import "QMImporter.h"
+#import "QMLibrary.h"
+#import "QMAlbum.h"
+#import "QMSong.h"
 
 @interface SongTests : XCTestCase
 
-@property (nonatomic) Song* testSong;
+@property (nonatomic) QMSong* testSong;
 
 @end
 
@@ -23,7 +23,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _testSong = [[[[[Importer importITLib] getAlbums] objectAtIndex:0] albumSongs] objectAtIndex:0];
+    _testSong = [[[[[QMImporter importITLib] getAlbums] objectAtIndex:0] albumSongs] objectAtIndex:0];
 }
 
 - (void)tearDown {
@@ -32,7 +32,7 @@
 }
 
 - (void)testSongType {
-    XCTAssertEqual([_testSong isKindOfClass:[Song class]], true, @"The testSong is a Song Object.");
+    XCTAssertEqual([_testSong isKindOfClass:[QMSong class]], true, @"The testSong is a Song Object.");
 }
 
 - (void)testSongValues {
