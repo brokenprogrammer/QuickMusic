@@ -25,30 +25,20 @@
  * SOFTWARE.
  */
 
-#import <Cocoa/Cocoa.h>
-#import "QMImporter.h"
+#import <Foundation/Foundation.h>
+#import <iTunesLibrary/ITLibrary.h>
+#import <iTunesLibrary/ITLibMediaItem.h>
+
 #import "QMLibrary.h"
 #import "QMAlbum.h"
-#import <iTunesLibrary/ITLibrary.h>
+#import "QMSong.h"
 
-int main(int argc, const char * argv[]) {
-    QMLibrary *MyLib = [QMImporter importITLib];
-    
-    NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
-    NSLog(@"%@", [MyLib getAlbums]);
-    NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] songs] count]);
-    NSLog(@"%lu", (unsigned long)[MyLib valueForKeyPath:@"albums.@count"]);
-    NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:0] title]);
-    
-    NSLog(@"BEFORE SORT");
-    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
-        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
-    }
-    
-    [[[MyLib getAlbums] objectAtIndex:0] sortBySongLength];
-    NSLog(@"AFTER SORT");
-    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
-        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
-    }
-    return NSApplicationMain(argc, argv);
+
+@interface QMImporter : NSObject {
+    // Protected instance variables
 }
+
+//Import iTunes library
++ (QMLibrary *)importITLib;
+
+@end

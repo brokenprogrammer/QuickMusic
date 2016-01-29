@@ -25,30 +25,36 @@
  * SOFTWARE.
  */
 
-#import <Cocoa/Cocoa.h>
-#import "QMImporter.h"
-#import "QMLibrary.h"
-#import "QMAlbum.h"
-#import <iTunesLibrary/ITLibrary.h>
+#import <Foundation/Foundation.h>
+#import "QMSong.h"
 
-int main(int argc, const char * argv[]) {
-    QMLibrary *MyLib = [QMImporter importITLib];
+@interface QMAlbum : NSObject {
     
-    NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
-    NSLog(@"%@", [MyLib getAlbums]);
-    NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] songs] count]);
-    NSLog(@"%lu", (unsigned long)[MyLib valueForKeyPath:@"albums.@count"]);
-    NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:0] title]);
-    
-    NSLog(@"BEFORE SORT");
-    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
-        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
-    }
-    
-    [[[MyLib getAlbums] objectAtIndex:0] sortBySongLength];
-    NSLog(@"AFTER SORT");
-    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
-        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
-    }
-    return NSApplicationMain(argc, argv);
 }
+
+@property (nonatomic, copy) NSString* title;        /* Album Title */
+@property (nonatomic) NSUInteger* trackCount;         /* Ammount of tracks in album */
+@property (nonatomic, copy) NSString* artist;       /* Album Artist */
+
+@property (nonatomic, strong) NSMutableArray* songs;  /* Array of songs owned by Album */
+
+//Initialize using only a title
+- (id)initWithTitle:(NSString *)title;
+//Initialize using title and artist
+- (id)initWithTitleAndArtist:(NSString *)title :(NSString *)artist;
+
+//Add new Song to the album
+- (void)addSong:(QMSong *)song;
+
+//Get Song with the specified title
+- (QMSong *)getSongByTitle:(NSString *)title;
+//Get Song at the specified index
+- (QMSong *)getSongByID:(NSUInteger)trackID;
+
+//Sorting functions
+- (void)sortByTitle;      /* Sorts the songs in alphabetical order by its titles */
+- (void)sortByArtist;     /* Sorts the sogns in alphabetical order by its artists */
+- (void)sortBySongLength; /* Sorts the songs in alphabetical order by its song length */
+
+- (NSMutableArray *)searchAlbum:(NSString *)keyWords;
+@end
