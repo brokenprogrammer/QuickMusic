@@ -27,6 +27,9 @@
 
 #import "AppDelegate.h"
 
+#import "QMImporter.h"
+#import "QMLibrary.h"
+
 @interface AppDelegate ()
 
 @end
@@ -35,6 +38,20 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    QMLibrary *MyLib = [QMImporter importITLib];
+    MyLib = nil;
+    
+    for (int x = 0; x < 10; x++) {
+        for (int x = 0; x < [[MyLib albums] count]; x++) {
+            [[[[MyLib getAlbums] objectAtIndex:x] songs] removeAllObjects];
+        }
+        [[MyLib albums] removeAllObjects];
+        MyLib = nil;
+        MyLib = [QMImporter importITLib];
+    }
+    
+    NSLog(@"%@", MyLib);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

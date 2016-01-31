@@ -31,43 +31,6 @@
 #import "QMAlbum.h"
 #import <iTunesLibrary/ITLibrary.h>
 
-int main(int argc, const char * argv[]) {
-    QMLibrary *MyLib = [QMImporter importITLib];
-    
-    NSLog(@"%@", [[[MyLib getAlbums] objectAtIndex:0] title]);
-    NSLog(@"%@", [MyLib getAlbums]);
-    NSLog(@"%lu", (unsigned long)[[[[MyLib getAlbums] objectAtIndex:0] songs] count]);
-    NSLog(@"%lu", (unsigned long)[MyLib valueForKeyPath:@"albums.@count"]);
-    NSLog(@"%@", [[[[MyLib getAlbums] objectAtIndex:0] getSongByID:0] title]);
-    
-    NSLog(@"BEFORE SORT");
-    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
-        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
-    }
-    
-    [[[MyLib getAlbums] objectAtIndex:0] sortBySongLength];
-    NSLog(@"AFTER SORT");
-    for (int x = 0; x < [[[[MyLib getAlbums] objectAtIndex:0] songs] count]; x++) {
-        NSLog(@"%@", [[[[[MyLib getAlbums] objectAtIndex:0] songs] objectAtIndex:x] title]);
-    }
-    
-    for (int x = 0; x < 1000; x++) {
-        for (int x = 0; x < [[MyLib albums] count]; x++) {
-            [[[[MyLib getAlbums] objectAtIndex:x] songs] removeAllObjects];
-        }
-        [[MyLib albums] removeAllObjects];
-        MyLib = nil;
-        MyLib = [QMImporter importITLib];
-    }
-    
-    for (int x = 0; x < 1000; x++) {
-        for (int x = 0; x < [[MyLib albums] count]; x++) {
-            [[[[MyLib getAlbums] objectAtIndex:x] songs] removeAllObjects];
-        }
-        [[MyLib albums] removeAllObjects];
-        MyLib = nil;
-        MyLib = [QMImporter importITLib];
-    }
-    
+int main(int argc, const char * argv[]) {    
     return NSApplicationMain(argc, argv);
 }
