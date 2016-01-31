@@ -7,194 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB2B226B1C56487D00C269D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B226A1C56487D00C269D0 /* AppDelegate.m */; };
-		AB2B226E1C56487D00C269D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B226D1C56487D00C269D0 /* main.m */; };
-		AB2B22711C56487D00C269D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B22701C56487D00C269D0 /* ViewController.m */; };
-		AB2B22731C56487D00C269D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2B22721C56487D00C269D0 /* Assets.xcassets */; };
-		AB2B22761C56487D00C269D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2B22741C56487D00C269D0 /* Main.storyboard */; };
-		AB2B22811C56487D00C269D0 /* QuickMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B22801C56487D00C269D0 /* QuickMusicTests.m */; };
-		AB2B228C1C56487D00C269D0 /* QuickMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B228B1C56487D00C269D0 /* QuickMusicUITests.m */; };
-		AB9FD4C91C58F1980073225C /* ImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FD4C81C58F1980073225C /* ImporterTests.m */; };
-		AB9FD4CB1C58F6660073225C /* SongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FD4CA1C58F6660073225C /* SongTests.m */; };
-		ABA1F9911C5673C60077B209 /* QMImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9901C5673C60077B209 /* QMImporter.m */; };
-		ABA1F9921C5673C60077B209 /* QMImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9901C5673C60077B209 /* QMImporter.m */; };
-		ABA1F9931C5673C60077B209 /* QMImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9901C5673C60077B209 /* QMImporter.m */; };
-		ABA1F9991C5674AD0077B209 /* QMSong.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9981C5674AD0077B209 /* QMSong.m */; };
-		ABA1F99A1C5674AD0077B209 /* QMSong.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9981C5674AD0077B209 /* QMSong.m */; };
-		ABA1F99B1C5674AD0077B209 /* QMSong.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F9981C5674AD0077B209 /* QMSong.m */; };
-		ABA1F99D1C5674C70077B209 /* QMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F99C1C5674C70077B209 /* QMAlbum.m */; };
-		ABA1F99E1C5674C70077B209 /* QMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F99C1C5674C70077B209 /* QMAlbum.m */; };
-		ABA1F99F1C5674C70077B209 /* QMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA1F99C1C5674C70077B209 /* QMAlbum.m */; };
-		ABA1F9A41C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
-		ABA1F9A51C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
-		ABA1F9A61C56775A0077B209 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */; };
-		ABA6086B1C5931760073F1B4 /* AlbumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6086A1C5931760073F1B4 /* AlbumTests.m */; };
-		ABA6FDC71C577B1C00FFDE0C /* QMLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* QMLibrary.m */; };
-		ABA6FDC81C577B1C00FFDE0C /* QMLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* QMLibrary.m */; };
-		ABA6FDC91C577B1C00FFDE0C /* QMLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA6FDC61C577B1C00FFDE0C /* QMLibrary.m */; };
-		ABB44DE61C5991D10005610B /* LibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB44DE51C5991D10005610B /* LibraryTests.m */; };
+		5596F4531C5D76F900C6B7BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4521C5D76F900C6B7BF /* AppDelegate.m */; };
+		5596F4551C5D76F900C6B7BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4541C5D76F900C6B7BF /* main.m */; };
+		5596F4571C5D76F900C6B7BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5596F4561C5D76F900C6B7BF /* Images.xcassets */; };
+		5596F45A1C5D76F900C6B7BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5596F4581C5D76F900C6B7BF /* MainMenu.xib */; };
+		5596F4661C5D76F900C6B7BF /* QuickMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4651C5D76F900C6B7BF /* QuickMusicTests.m */; };
+		5596F4731C5D77D800C6B7BF /* AlbumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F46F1C5D77D800C6B7BF /* AlbumTests.m */; };
+		5596F4741C5D77D800C6B7BF /* ImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4701C5D77D800C6B7BF /* ImporterTests.m */; };
+		5596F4751C5D77D800C6B7BF /* LibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4711C5D77D800C6B7BF /* LibraryTests.m */; };
+		5596F4761C5D77D800C6B7BF /* SongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4721C5D77D800C6B7BF /* SongTests.m */; };
+		5596F4831C5D77EA00C6B7BF /* QMAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4791C5D77EA00C6B7BF /* QMAlbum.m */; };
+		5596F4841C5D77EA00C6B7BF /* QMImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F47B1C5D77EA00C6B7BF /* QMImporter.m */; };
+		5596F4851C5D77EA00C6B7BF /* QMLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F47D1C5D77EA00C6B7BF /* QMLibrary.m */; };
+		5596F4861C5D77EA00C6B7BF /* QMSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F47F1C5D77EA00C6B7BF /* QMSong.m */; };
+		5596F4871C5D77EA00C6B7BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5596F4811C5D77EA00C6B7BF /* ViewController.m */; };
+		55BF67C51C5E26F300F95753 /* iTunesLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BF67C41C5E26F300F95753 /* iTunesLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AB2B227D1C56487D00C269D0 /* PBXContainerItemProxy */ = {
+		5596F4601C5D76F900C6B7BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AB2B225E1C56487D00C269D0 /* Project object */;
+			containerPortal = 5596F4441C5D76F900C6B7BF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AB2B22651C56487D00C269D0;
-			remoteInfo = QuickMusic;
-		};
-		AB2B22881C56487D00C269D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB2B225E1C56487D00C269D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB2B22651C56487D00C269D0;
+			remoteGlobalIDString = 5596F44B1C5D76F900C6B7BF;
 			remoteInfo = QuickMusic;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB2B22661C56487D00C269D0 /* QuickMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2B22691C56487D00C269D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AB2B226A1C56487D00C269D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AB2B226D1C56487D00C269D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB2B226F1C56487D00C269D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AB2B22701C56487D00C269D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AB2B22721C56487D00C269D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB2B22751C56487D00C269D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB2B22771C56487D00C269D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB2B227C1C56487D00C269D0 /* QuickMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2B22801C56487D00C269D0 /* QuickMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickMusicTests.m; sourceTree = "<group>"; };
-		AB2B22821C56487D00C269D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB2B22871C56487D00C269D0 /* QuickMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2B228B1C56487D00C269D0 /* QuickMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickMusicUITests.m; sourceTree = "<group>"; };
-		AB2B228D1C56487D00C269D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB9FD4C81C58F1980073225C /* ImporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImporterTests.m; sourceTree = "<group>"; };
-		AB9FD4CA1C58F6660073225C /* SongTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTests.m; sourceTree = "<group>"; };
-		ABA1F9901C5673C60077B209 /* QMImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMImporter.m; sourceTree = "<group>"; };
-		ABA1F9981C5674AD0077B209 /* QMSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSong.m; sourceTree = "<group>"; };
-		ABA1F99C1C5674C70077B209 /* QMAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMAlbum.m; sourceTree = "<group>"; };
-		ABA1F9A01C5675380077B209 /* QMImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMImporter.h; sourceTree = "<group>"; };
-		ABA1F9A11C5675510077B209 /* QMSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSong.h; sourceTree = "<group>"; };
-		ABA1F9A21C5675660077B209 /* QMAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMAlbum.h; sourceTree = "<group>"; };
-		ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iTunesLibrary.framework; sourceTree = "<group>"; };
-		ABA6086A1C5931760073F1B4 /* AlbumTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTests.m; sourceTree = "<group>"; };
-		ABA6FDC61C577B1C00FFDE0C /* QMLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMLibrary.m; sourceTree = "<group>"; };
-		ABA6FDCA1C577B4B00FFDE0C /* QMLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMLibrary.h; sourceTree = "<group>"; };
-		ABB44DE51C5991D10005610B /* LibraryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTests.m; sourceTree = "<group>"; };
+		5596F44C1C5D76F900C6B7BF /* QuickMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5596F4501C5D76F900C6B7BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5596F4511C5D76F900C6B7BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5596F4521C5D76F900C6B7BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5596F4541C5D76F900C6B7BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5596F4561C5D76F900C6B7BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5596F4591C5D76F900C6B7BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5596F45F1C5D76F900C6B7BF /* QuickMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5596F4641C5D76F900C6B7BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5596F4651C5D76F900C6B7BF /* QuickMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickMusicTests.m; sourceTree = "<group>"; };
+		5596F46F1C5D77D800C6B7BF /* AlbumTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTests.m; sourceTree = "<group>"; };
+		5596F4701C5D77D800C6B7BF /* ImporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImporterTests.m; sourceTree = "<group>"; };
+		5596F4711C5D77D800C6B7BF /* LibraryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTests.m; sourceTree = "<group>"; };
+		5596F4721C5D77D800C6B7BF /* SongTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTests.m; sourceTree = "<group>"; };
+		5596F4781C5D77EA00C6B7BF /* QMAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMAlbum.h; sourceTree = "<group>"; };
+		5596F4791C5D77EA00C6B7BF /* QMAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMAlbum.m; sourceTree = "<group>"; };
+		5596F47A1C5D77EA00C6B7BF /* QMImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMImporter.h; sourceTree = "<group>"; };
+		5596F47B1C5D77EA00C6B7BF /* QMImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMImporter.m; sourceTree = "<group>"; };
+		5596F47C1C5D77EA00C6B7BF /* QMLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMLibrary.h; sourceTree = "<group>"; };
+		5596F47D1C5D77EA00C6B7BF /* QMLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMLibrary.m; sourceTree = "<group>"; };
+		5596F47E1C5D77EA00C6B7BF /* QMSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSong.h; sourceTree = "<group>"; };
+		5596F47F1C5D77EA00C6B7BF /* QMSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSong.m; sourceTree = "<group>"; };
+		5596F4801C5D77EA00C6B7BF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5596F4811C5D77EA00C6B7BF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		55BF67C41C5E26F300F95753 /* iTunesLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iTunesLibrary.framework; path = ../../../../Library/Frameworks/iTunesLibrary.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AB2B22631C56487D00C269D0 /* Frameworks */ = {
+		5596F4491C5D76F900C6B7BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA1F9A41C56775A0077B209 /* iTunesLibrary.framework in Frameworks */,
+				55BF67C51C5E26F300F95753 /* iTunesLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB2B22791C56487D00C269D0 /* Frameworks */ = {
+		5596F45C1C5D76F900C6B7BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA1F9A51C56775A0077B209 /* iTunesLibrary.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB2B22841C56487D00C269D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABA1F9A61C56775A0077B209 /* iTunesLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB2B225D1C56487D00C269D0 = {
+		5596F4431C5D76F900C6B7BF = {
 			isa = PBXGroup;
 			children = (
-				AB2B22681C56487D00C269D0 /* QuickMusic */,
-				AB2B227F1C56487D00C269D0 /* QuickMusicTests */,
-				AB2B228A1C56487D00C269D0 /* QuickMusicUITests */,
-				AB2B22671C56487D00C269D0 /* Products */,
+				55BF67C41C5E26F300F95753 /* iTunesLibrary.framework */,
+				5596F44E1C5D76F900C6B7BF /* QuickMusic */,
+				5596F4621C5D76F900C6B7BF /* QuickMusicTests */,
+				5596F44D1C5D76F900C6B7BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AB2B22671C56487D00C269D0 /* Products */ = {
+		5596F44D1C5D76F900C6B7BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB2B22661C56487D00C269D0 /* QuickMusic.app */,
-				AB2B227C1C56487D00C269D0 /* QuickMusicTests.xctest */,
-				AB2B22871C56487D00C269D0 /* QuickMusicUITests.xctest */,
+				5596F44C1C5D76F900C6B7BF /* QuickMusic.app */,
+				5596F45F1C5D76F900C6B7BF /* QuickMusicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB2B22681C56487D00C269D0 /* QuickMusic */ = {
+		5596F44E1C5D76F900C6B7BF /* QuickMusic */ = {
 			isa = PBXGroup;
 			children = (
-				ABA1F9A31C56775A0077B209 /* iTunesLibrary.framework */,
-				AB2B22691C56487D00C269D0 /* AppDelegate.h */,
-				AB2B226A1C56487D00C269D0 /* AppDelegate.m */,
-				AB2B226F1C56487D00C269D0 /* ViewController.h */,
-				AB2B22701C56487D00C269D0 /* ViewController.m */,
-				AB2B22721C56487D00C269D0 /* Assets.xcassets */,
-				AB2B22741C56487D00C269D0 /* Main.storyboard */,
-				AB2B22771C56487D00C269D0 /* Info.plist */,
-				ABA1F9A01C5675380077B209 /* QMImporter.h */,
-				ABA1F9901C5673C60077B209 /* QMImporter.m */,
-				ABA1F9A11C5675510077B209 /* QMSong.h */,
-				ABA1F9981C5674AD0077B209 /* QMSong.m */,
-				ABA1F9A21C5675660077B209 /* QMAlbum.h */,
-				ABA1F99C1C5674C70077B209 /* QMAlbum.m */,
-				ABA6FDCA1C577B4B00FFDE0C /* QMLibrary.h */,
-				ABA6FDC61C577B1C00FFDE0C /* QMLibrary.m */,
-				AB2B226C1C56487D00C269D0 /* Supporting Files */,
+				5596F4781C5D77EA00C6B7BF /* QMAlbum.h */,
+				5596F4791C5D77EA00C6B7BF /* QMAlbum.m */,
+				5596F47A1C5D77EA00C6B7BF /* QMImporter.h */,
+				5596F47B1C5D77EA00C6B7BF /* QMImporter.m */,
+				5596F47C1C5D77EA00C6B7BF /* QMLibrary.h */,
+				5596F47D1C5D77EA00C6B7BF /* QMLibrary.m */,
+				5596F47E1C5D77EA00C6B7BF /* QMSong.h */,
+				5596F47F1C5D77EA00C6B7BF /* QMSong.m */,
+				5596F4801C5D77EA00C6B7BF /* ViewController.h */,
+				5596F4811C5D77EA00C6B7BF /* ViewController.m */,
+				5596F4511C5D76F900C6B7BF /* AppDelegate.h */,
+				5596F4521C5D76F900C6B7BF /* AppDelegate.m */,
+				5596F4561C5D76F900C6B7BF /* Images.xcassets */,
+				5596F4581C5D76F900C6B7BF /* MainMenu.xib */,
+				5596F44F1C5D76F900C6B7BF /* Supporting Files */,
 			);
 			path = QuickMusic;
 			sourceTree = "<group>";
 		};
-		AB2B226C1C56487D00C269D0 /* Supporting Files */ = {
+		5596F44F1C5D76F900C6B7BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AB2B226D1C56487D00C269D0 /* main.m */,
+				5596F4501C5D76F900C6B7BF /* Info.plist */,
+				5596F4541C5D76F900C6B7BF /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AB2B227F1C56487D00C269D0 /* QuickMusicTests */ = {
+		5596F4621C5D76F900C6B7BF /* QuickMusicTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB2B22801C56487D00C269D0 /* QuickMusicTests.m */,
-				AB2B22821C56487D00C269D0 /* Info.plist */,
-				AB9FD4C81C58F1980073225C /* ImporterTests.m */,
-				AB9FD4CA1C58F6660073225C /* SongTests.m */,
-				ABA6086A1C5931760073F1B4 /* AlbumTests.m */,
-				ABB44DE51C5991D10005610B /* LibraryTests.m */,
+				5596F46F1C5D77D800C6B7BF /* AlbumTests.m */,
+				5596F4701C5D77D800C6B7BF /* ImporterTests.m */,
+				5596F4711C5D77D800C6B7BF /* LibraryTests.m */,
+				5596F4721C5D77D800C6B7BF /* SongTests.m */,
+				5596F4651C5D76F900C6B7BF /* QuickMusicTests.m */,
+				5596F4631C5D76F900C6B7BF /* Supporting Files */,
 			);
 			path = QuickMusicTests;
 			sourceTree = "<group>";
 		};
-		AB2B228A1C56487D00C269D0 /* QuickMusicUITests */ = {
+		5596F4631C5D76F900C6B7BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AB2B228B1C56487D00C269D0 /* QuickMusicUITests.m */,
-				AB2B228D1C56487D00C269D0 /* Info.plist */,
+				5596F4641C5D76F900C6B7BF /* Info.plist */,
 			);
-			path = QuickMusicUITests;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB2B22651C56487D00C269D0 /* QuickMusic */ = {
+		5596F44B1C5D76F900C6B7BF /* QuickMusic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB2B22901C56487D00C269D0 /* Build configuration list for PBXNativeTarget "QuickMusic" */;
+			buildConfigurationList = 5596F4691C5D76F900C6B7BF /* Build configuration list for PBXNativeTarget "QuickMusic" */;
 			buildPhases = (
-				AB2B22621C56487D00C269D0 /* Sources */,
-				AB2B22631C56487D00C269D0 /* Frameworks */,
-				AB2B22641C56487D00C269D0 /* Resources */,
+				5596F4481C5D76F900C6B7BF /* Sources */,
+				5596F4491C5D76F900C6B7BF /* Frameworks */,
+				5596F44A1C5D76F900C6B7BF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -202,68 +169,46 @@
 			);
 			name = QuickMusic;
 			productName = QuickMusic;
-			productReference = AB2B22661C56487D00C269D0 /* QuickMusic.app */;
+			productReference = 5596F44C1C5D76F900C6B7BF /* QuickMusic.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AB2B227B1C56487D00C269D0 /* QuickMusicTests */ = {
+		5596F45E1C5D76F900C6B7BF /* QuickMusicTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB2B22931C56487D00C269D0 /* Build configuration list for PBXNativeTarget "QuickMusicTests" */;
+			buildConfigurationList = 5596F46C1C5D76F900C6B7BF /* Build configuration list for PBXNativeTarget "QuickMusicTests" */;
 			buildPhases = (
-				AB2B22781C56487D00C269D0 /* Sources */,
-				AB2B22791C56487D00C269D0 /* Frameworks */,
-				AB2B227A1C56487D00C269D0 /* Resources */,
+				5596F45B1C5D76F900C6B7BF /* Sources */,
+				5596F45C1C5D76F900C6B7BF /* Frameworks */,
+				5596F45D1C5D76F900C6B7BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AB2B227E1C56487D00C269D0 /* PBXTargetDependency */,
+				5596F4611C5D76F900C6B7BF /* PBXTargetDependency */,
 			);
 			name = QuickMusicTests;
 			productName = QuickMusicTests;
-			productReference = AB2B227C1C56487D00C269D0 /* QuickMusicTests.xctest */;
+			productReference = 5596F45F1C5D76F900C6B7BF /* QuickMusicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AB2B22861C56487D00C269D0 /* QuickMusicUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB2B22961C56487D00C269D0 /* Build configuration list for PBXNativeTarget "QuickMusicUITests" */;
-			buildPhases = (
-				AB2B22831C56487D00C269D0 /* Sources */,
-				AB2B22841C56487D00C269D0 /* Frameworks */,
-				AB2B22851C56487D00C269D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB2B22891C56487D00C269D0 /* PBXTargetDependency */,
-			);
-			name = QuickMusicUITests;
-			productName = QuickMusicUITests;
-			productReference = AB2B22871C56487D00C269D0 /* QuickMusicUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AB2B225E1C56487D00C269D0 /* Project object */ = {
+		5596F4441C5D76F900C6B7BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Oskar Mendel";
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "QuickMusic Project";
 				TargetAttributes = {
-					AB2B22651C56487D00C269D0 = {
-						CreatedOnToolsVersion = 7.2;
+					5596F44B1C5D76F900C6B7BF = {
+						CreatedOnToolsVersion = 6.2;
 					};
-					AB2B227B1C56487D00C269D0 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = AB2B22651C56487D00C269D0;
-					};
-					AB2B22861C56487D00C269D0 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = AB2B22651C56487D00C269D0;
+					5596F45E1C5D76F900C6B7BF = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 5596F44B1C5D76F900C6B7BF;
 					};
 				};
 			};
-			buildConfigurationList = AB2B22611C56487D00C269D0 /* Build configuration list for PBXProject "QuickMusic" */;
+			buildConfigurationList = 5596F4471C5D76F900C6B7BF /* Build configuration list for PBXProject "QuickMusic" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -271,36 +216,28 @@
 				en,
 				Base,
 			);
-			mainGroup = AB2B225D1C56487D00C269D0;
-			productRefGroup = AB2B22671C56487D00C269D0 /* Products */;
+			mainGroup = 5596F4431C5D76F900C6B7BF;
+			productRefGroup = 5596F44D1C5D76F900C6B7BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB2B22651C56487D00C269D0 /* QuickMusic */,
-				AB2B227B1C56487D00C269D0 /* QuickMusicTests */,
-				AB2B22861C56487D00C269D0 /* QuickMusicUITests */,
+				5596F44B1C5D76F900C6B7BF /* QuickMusic */,
+				5596F45E1C5D76F900C6B7BF /* QuickMusicTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AB2B22641C56487D00C269D0 /* Resources */ = {
+		5596F44A1C5D76F900C6B7BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB2B22731C56487D00C269D0 /* Assets.xcassets in Resources */,
-				AB2B22761C56487D00C269D0 /* Main.storyboard in Resources */,
+				5596F4571C5D76F900C6B7BF /* Images.xcassets in Resources */,
+				5596F45A1C5D76F900C6B7BF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB2B227A1C56487D00C269D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB2B22851C56487D00C269D0 /* Resources */ = {
+		5596F45D1C5D76F900C6B7BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,76 +247,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AB2B22621C56487D00C269D0 /* Sources */ = {
+		5596F4481C5D76F900C6B7BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA1F9991C5674AD0077B209 /* QMSong.m in Sources */,
-				AB2B22711C56487D00C269D0 /* ViewController.m in Sources */,
-				AB2B226E1C56487D00C269D0 /* main.m in Sources */,
-				ABA1F99D1C5674C70077B209 /* QMAlbum.m in Sources */,
-				ABA6FDC71C577B1C00FFDE0C /* QMLibrary.m in Sources */,
-				AB2B226B1C56487D00C269D0 /* AppDelegate.m in Sources */,
-				ABA1F9911C5673C60077B209 /* QMImporter.m in Sources */,
+				5596F4871C5D77EA00C6B7BF /* ViewController.m in Sources */,
+				5596F4861C5D77EA00C6B7BF /* QMSong.m in Sources */,
+				5596F4551C5D76F900C6B7BF /* main.m in Sources */,
+				5596F4851C5D77EA00C6B7BF /* QMLibrary.m in Sources */,
+				5596F4531C5D76F900C6B7BF /* AppDelegate.m in Sources */,
+				5596F4831C5D77EA00C6B7BF /* QMAlbum.m in Sources */,
+				5596F4841C5D77EA00C6B7BF /* QMImporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB2B22781C56487D00C269D0 /* Sources */ = {
+		5596F45B1C5D76F900C6B7BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA1F99A1C5674AD0077B209 /* QMSong.m in Sources */,
-				AB9FD4CB1C58F6660073225C /* SongTests.m in Sources */,
-				AB2B22811C56487D00C269D0 /* QuickMusicTests.m in Sources */,
-				ABA6086B1C5931760073F1B4 /* AlbumTests.m in Sources */,
-				ABA1F9921C5673C60077B209 /* QMImporter.m in Sources */,
-				ABA1F99E1C5674C70077B209 /* QMAlbum.m in Sources */,
-				ABA6FDC81C577B1C00FFDE0C /* QMLibrary.m in Sources */,
-				AB9FD4C91C58F1980073225C /* ImporterTests.m in Sources */,
-				ABB44DE61C5991D10005610B /* LibraryTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB2B22831C56487D00C269D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABA1F99B1C5674AD0077B209 /* QMSong.m in Sources */,
-				AB2B228C1C56487D00C269D0 /* QuickMusicUITests.m in Sources */,
-				ABA1F9931C5673C60077B209 /* QMImporter.m in Sources */,
-				ABA1F99F1C5674C70077B209 /* QMAlbum.m in Sources */,
-				ABA6FDC91C577B1C00FFDE0C /* QMLibrary.m in Sources */,
+				5596F4661C5D76F900C6B7BF /* QuickMusicTests.m in Sources */,
+				5596F4751C5D77D800C6B7BF /* LibraryTests.m in Sources */,
+				5596F4731C5D77D800C6B7BF /* AlbumTests.m in Sources */,
+				5596F4761C5D77D800C6B7BF /* SongTests.m in Sources */,
+				5596F4741C5D77D800C6B7BF /* ImporterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AB2B227E1C56487D00C269D0 /* PBXTargetDependency */ = {
+		5596F4611C5D76F900C6B7BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB2B22651C56487D00C269D0 /* QuickMusic */;
-			targetProxy = AB2B227D1C56487D00C269D0 /* PBXContainerItemProxy */;
-		};
-		AB2B22891C56487D00C269D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB2B22651C56487D00C269D0 /* QuickMusic */;
-			targetProxy = AB2B22881C56487D00C269D0 /* PBXContainerItemProxy */;
+			target = 5596F44B1C5D76F900C6B7BF /* QuickMusic */;
+			targetProxy = 5596F4601C5D76F900C6B7BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AB2B22741C56487D00C269D0 /* Main.storyboard */ = {
+		5596F4581C5D76F900C6B7BF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AB2B22751C56487D00C269D0 /* Base */,
+				5596F4591C5D76F900C6B7BF /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AB2B228E1C56487D00C269D0 /* Debug */ = {
+		5596F4671C5D76F900C6B7BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -398,31 +314,34 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks/;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Development/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		AB2B228F1C56487D00C269D0 /* Release */ = {
+		5596F4681C5D76F900C6B7BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -444,21 +363,25 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks/;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Development/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		AB2B22911C56487D00C269D0 /* Debug */ = {
+		5596F46A1C5D76F900C6B7BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -466,17 +389,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QuickMusic",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = QuickMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		AB2B22921C56487D00C269D0 /* Release */ = {
+		5596F46B1C5D76F900C6B7BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -484,124 +405,81 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QuickMusic",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = QuickMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		AB2B22941C56487D00C269D0 /* Debug */ = {
+		5596F46D1C5D76F900C6B7BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
-					"$(PROJECT_DIR)/QuickMusic",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = QuickMusicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickMusic.app/Contents/MacOS/QuickMusic";
 			};
 			name = Debug;
 		};
-		AB2B22951C56487D00C269D0 /* Release */ = {
+		5596F46E1C5D76F900C6B7BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
-					"$(PROJECT_DIR)/QuickMusic",
 				);
 				INFOPLIST_FILE = QuickMusicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickMusic.app/Contents/MacOS/QuickMusic";
-			};
-			name = Release;
-		};
-		AB2B22971C56487D00C269D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/QuickMusic",
-				);
-				INFOPLIST_FILE = QuickMusicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusicUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = QuickMusic;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		AB2B22981C56487D00C269D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/QuickMusic",
-				);
-				INFOPLIST_FILE = QuickMusicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskarmendel.QuickMusicUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = QuickMusic;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB2B22611C56487D00C269D0 /* Build configuration list for PBXProject "QuickMusic" */ = {
+		5596F4471C5D76F900C6B7BF /* Build configuration list for PBXProject "QuickMusic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB2B228E1C56487D00C269D0 /* Debug */,
-				AB2B228F1C56487D00C269D0 /* Release */,
+				5596F4671C5D76F900C6B7BF /* Debug */,
+				5596F4681C5D76F900C6B7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB2B22901C56487D00C269D0 /* Build configuration list for PBXNativeTarget "QuickMusic" */ = {
+		5596F4691C5D76F900C6B7BF /* Build configuration list for PBXNativeTarget "QuickMusic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB2B22911C56487D00C269D0 /* Debug */,
-				AB2B22921C56487D00C269D0 /* Release */,
+				5596F46A1C5D76F900C6B7BF /* Debug */,
+				5596F46B1C5D76F900C6B7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB2B22931C56487D00C269D0 /* Build configuration list for PBXNativeTarget "QuickMusicTests" */ = {
+		5596F46C1C5D76F900C6B7BF /* Build configuration list for PBXNativeTarget "QuickMusicTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB2B22941C56487D00C269D0 /* Debug */,
-				AB2B22951C56487D00C269D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB2B22961C56487D00C269D0 /* Build configuration list for PBXNativeTarget "QuickMusicUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB2B22971C56487D00C269D0 /* Debug */,
-				AB2B22981C56487D00C269D0 /* Release */,
+				5596F46D1C5D76F900C6B7BF /* Debug */,
+				5596F46E1C5D76F900C6B7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AB2B225E1C56487D00C269D0 /* Project object */;
+	rootObject = 5596F4441C5D76F900C6B7BF /* Project object */;
 }

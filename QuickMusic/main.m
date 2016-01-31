@@ -59,5 +59,15 @@ int main(int argc, const char * argv[]) {
         MyLib = nil;
         MyLib = [QMImporter importITLib];
     }
+    
+    for (int x = 0; x < 1000; x++) {
+        for (int x = 0; x < [[MyLib albums] count]; x++) {
+            [[[[MyLib getAlbums] objectAtIndex:x] songs] removeAllObjects];
+        }
+        [[MyLib albums] removeAllObjects];
+        MyLib = nil;
+        MyLib = [QMImporter importITLib];
+    }
+    
     return NSApplicationMain(argc, argv);
 }
